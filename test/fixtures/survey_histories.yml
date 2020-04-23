@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entry_time: 2020-04-22 21:19:11
+  departure_time: 2020-04-22 21:19:11
+  temperature: MyString
+  mask: false
+  new_mask: false
+  symptom: false
+  employee_id: 1
+
+two:
+  entry_time: 2020-04-22 21:19:11
+  departure_time: 2020-04-22 21:19:11
+  temperature: MyString
+  mask: false
+  new_mask: false
+  symptom: false
+  employee_id: 1
