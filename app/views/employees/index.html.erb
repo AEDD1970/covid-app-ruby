@@ -1,0 +1,47 @@
+<h1 class="h3 mb-2 text-gray-800">Empleados</h1>
+
+<div>
+  <%= link_to new_employee_path, {remote: true, class: "btn btn-info", id: "anadir-categoria-btn"} do %>
+    <span class="fas fa-plus-square"></span>
+    <% end %>
+</div>
+
+<div class="card shadow mb-4">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="tablaEmployees" class="table table-bordered" width="90%">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Typo de Documento</th>
+            <th>Grupo Sanguineo</th>
+            <th>Genero</th>
+            <th>Cargo</th>
+            <th>Sede</th>
+            <th></th>
+          </tr>
+        </thead>
+          <tbody>
+            <% @employees.each do |emp| %>
+              <tr id="employee_<% emp.id %>">
+                <td><%= emp.name %></td>
+                <td><%= emp.last_name %></td>
+                <td><%= emp.document_type %></td>
+                <td><%= emp.blood_type %></td>
+                <td><%= emp.gender %></td>
+                <td><%= emp.position %></td>
+                <td><%= emp.campus %></td>
+                  <td>
+                    <%= link_to "Editar", edit_employee_path(emp), html_options = {class: "btn btn-info btn-xs", remote: true}%>
+                    <%= link_to "Borrar", emp, remote: true, method: :delete, data: { confirm: "¿Estas seguro que quieres borrar el empleado: #{emp.name}?"}, class: "btn btn-danger btn-xs" %>
+                  </td>
+              </tr>
+            <% end %>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%=render 'modal_employees' %>
