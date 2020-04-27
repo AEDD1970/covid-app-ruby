@@ -1,5 +1,5 @@
 class CreateEmployees < ActiveRecord::Migration[5.2]
-  def change
+  def up
     create_table :employees do |t|
       t.string :name
       t.string :last_name

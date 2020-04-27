@@ -1,5 +1,5 @@
 class CreateSurveyHistories < ActiveRecord::Migration[5.2]
-  def change
+  def up
     create_table :survey_histories do |t|
       t.datetime :entry_time
       t.datetime :departure_time

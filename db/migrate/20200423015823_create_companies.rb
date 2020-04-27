@@ -1,5 +1,5 @@
 class CreateCompanies < ActiveRecord::Migration[5.2]
-  def change
+  def up
     create_table :companies do |t|
       t.string :name
 
