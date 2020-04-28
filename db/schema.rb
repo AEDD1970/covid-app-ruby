@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_04_23_025652) do
     t.string "name"
     t.string "last_name"
     t.string "document_type"
+    t.integer "document_number"
     t.string "blood_type"
     t.string "gender"
     t.string "position"

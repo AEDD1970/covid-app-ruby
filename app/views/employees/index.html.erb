@@ -1,7 +1,15 @@
-<h1 class="h3 mb-2 text-gray-800">Empleados</h1>
+<div style="align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex; margin-top: 5%"><h5
+  class="h3 mb-2 text-gray-800 ">Registro de Empleados
+  <h1 class="fas fa-user-friends"></h1>
+</h5>
+</div>
 
 <div>
-  <%= link_to new_employee_path, {remote: true, class: "btn btn-info", id: "anadir-categoria-btn"} do %>
+  <%= link_to new_employee_path, {remote: true, class: "btn btn-info", id: "anadir-employee-btn"} do %>
     <span class="fas fa-plus-square"></span>
     <% end %>
 </div>
@@ -15,6 +23,7 @@
             <th>Nombre</th>
             <th>Apellido</th>
             <th>Typo de Documento</th>
+            <th>Numero de Documento</th>
             <th>Grupo Sanguineo</th>
             <th>Genero</th>
             <th>Cargo</th>
@@ -28,6 +37,7 @@
                 <td><%= emp.name %></td>
                 <td><%= emp.last_name %></td>
                 <td><%= emp.document_type %></td>
+                <td><%= emp.document_number %></td>
                 <td><%= emp.blood_type %></td>
                 <td><%= emp.gender %></td>
                 <td><%= emp.position %></td>

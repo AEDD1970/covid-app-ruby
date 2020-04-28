@@ -1,0 +1,45 @@
+<h1 class="h3 mb-2 text-gray-800">Historial de Entradas de los Empleados</h1>
+
+<div>
+  <%= link_to new_surveys_history_path, {remote: true, class: "btn btn-info", id: "anadir-employee-btn"} do %>
+    <span class="fas fa-plus-square"></span>
+  <% end %>
+</div>
+
+<div class="card shadow mb-4">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="tablaEmployees" class="table table-bordered" width="90%">
+        <thead>
+        <tr>
+          <th>Temperatura</th>
+          <th>Tapabocas</th>
+          <th>Nuevo Tapabocas</th>
+          <th>Sintomas</th>
+          <th>Hora de Ingreso</th>
+          <th>Hora de Salida</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @surveys_history.each do |hist| %>
+          <tr id="survey_history_<% hist.id %>">
+            <td><%= hist.temperature %></td>
+            <td><%= hist.mask %></td>
+            <td><%= hist.new_mask %></td>
+            <td><%= hist.symptom %></td>
+            <td><%= hist.entry_time %></td>
+            <td><%= hist.departure_time %></td>
+            <td>
+              <%= link_to "Editar", edit_surveys_history_path(hist), html_options = {class: "btn btn-info btn-xs", remote: true}%>
+              <%#= link_to "Borrar", hist, remote: true, method: :delete, data: { confirm: "¿Estas seguro que quieres borrar el registro de: #{hist.temperature}?"}, class: "btn btn-danger btn-xs" %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%=render 'modal_surveys_history' %>

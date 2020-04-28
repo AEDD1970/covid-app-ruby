@@ -1,0 +1,8 @@
+//add the dialog title
+$('#modal-employees-title').html("Editar Empleado");
+
+//Render the new form
+$('.modal-body-employees').html('<%= j render("form") %>');
+
+//Show the dynamic dialog
+$('#modalEmployees').modal("show");

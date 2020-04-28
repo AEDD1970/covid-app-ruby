@@ -12,11 +12,11 @@ class EmployeesController < ApplicationController
     @employee = Employee.new(employee_params)
     respond_to do |format|
       if @employee.save
-        format.json { head :no_content}
+        format.json { head :no_content }
         format.js
       else
         format.json { render json: @employee.errors.full_messages, status: :unprocessable_entity}
-        format.js { render :new}
+        format.js { render :new }
       end
     end
   end
@@ -48,6 +48,6 @@ class EmployeesController < ApplicationController
   end
 
   def employee_params
-    params.permit(:name, :last_name, :document_type, :blood_type, :gender, :position, :campus, :email, :admin)
+    params.require(:employee).permit(:name, :last_name, :document_type, :document_number, :blood_type, :gender, :position, :campus, :email, :admin)
   end
 end

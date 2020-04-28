@@ -26,8 +26,18 @@
   <div class="item form-group<%= @employee.errors[:document_type].any? ? ' has-error has-feedback' : '' %>">
     <%= f.label :document_type, "Typo de documento: " %>
     <div class="input-group">
-      <%= f.select(:document_type, options_for_select([['CC', 1], ['CE', 2], ['TI', 3], ['PA', 4]]), {include_blank: 'Seleccionar'}, {class: "form-control"}) %>
+      <%= f.select(:document_type, options_for_select([['CC', 'Cédula de ciudadanía'], ['CE', '	Cédula de extranjería'], ['TI', '	Tarjeta de identidad'], ['PA', 'Pasaporte']]), {include_blank: 'Seleccionar'}, {class: "form-control"}) %>
       <%if @employee.errors[:document_type].any? %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="item form-group<%= @employee.errors[:document_number].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :document_number, "Numero de documento: " %>
+    <div class="input-group">
+      <%= f.text_field :document_number, {:class => "form-control", :placeholder => "Introduzca el Numero de documento"} %>
+      <%if @employee.errors[:document_number].any? %>
+        <p class="bg-danger"><%= @employee.errors[:document_number].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
@@ -35,9 +45,9 @@
   <div class="item form-group<%= @employee.errors[:blood_type].any? ? ' has-error has-feedback' : '' %>">
     <%= f.label :blood_type, "Typo de sangre: " %>
     <div class="input-group">
-      <%= f.text_field :document_type, {:class => "form-control", :placeholder => "Introduzca el tipo sangre del empleado"} %>
-      <%if @employee.errors[:document_type].any? %>
-        <p class="bg-danger"><%= @employee.errors[:document_type].to_s[/\w([^"]*)/] %></p>
+      <%= f.text_field :blood_type, {:class => "form-control", :placeholder => "Introduzca el tipo sangre del empleado"} %>
+      <%if @employee.errors[:blood_type].any? %>
+        <p class="bg-danger"><%= @employee.errors[:blood_type].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
@@ -45,7 +55,7 @@
   <div class="item form-group<%= @employee.errors[:gender].any? ? ' has-error has-feedback' : '' %>">
     <%= f.label :gender, "Genero: " %>
     <div class="input-group">
-      <%= f.select(:gender, options_for_select([['Masculino', 1], ['Femenino', 2]]), {include_blank: 'Seleccionar'}, {class: "form-control"}) %>
+      <%= f.select(:gender, options_for_select([['Masculino', 'Masculino'], ['Femenino', 'Femenino']]), {include_blank: 'Seleccionar'}, {class: "form-control"}) %>
       <%if @employee.errors[:gender].any? %>
       <% end %>
     </div>
@@ -75,7 +85,7 @@
     <%= f.label :email, "Email: " %>
     <div class="input-group">
       <%= f.text_field :email, {:class => "form-control", :placeholder => "Introduzca el email del empleado"} %>
-      <%if @employee.errors[:campus].any? %>
+      <%if @employee.errors[:email].any? %>
         <p class="bg-danger"><%= @employee.errors[:email].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
