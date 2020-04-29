@@ -1,43 +1,159 @@
-<h1 class="h3 mb-2 text-gray-800">Historial de Entradas de los Empleados</h1>
+<div style="align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex; margin-top: 3%"><h5
+  class="h3 mb-2 text-gray-800 ">Encuesta de entrada
+  <h1 class="fas fa-user-friends"></h1>
+</h5>
+</div>
+<!--formulario de cedula-->
+<form class="form-inline" style="margin-left: 9%!important">
+  <div class="form-group mx-sm-3 mb-2" >
+    <input type="number" class="form-control" id="inputPassword2" placeholder="Cedula">
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Buscar Cedula</button>
+</form>
+<!-- fin de formulario de cedula-->
+<!-- datos de empleados al consultarr-->
+<div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
+<p><label class="col-sm-2 col-form-label"><b>Nombre</b></label>
+  <label class="col-sm-2 col-form-label"><b>Cedula</b></label>
+  <label class="col-sm-2 col-form-label"><b>Genero</b></label>
+  <label class="col-sm-2 col-form-label"><b>Edad</b></label>
+  <label class="col-sm-2 col-form-label"><b>Telefono</b></label>
 
-<div>
-  <%= link_to new_surveys_history_url, {remote: true, class: "btn btn-info", id: "anadir-surveys_history-btn"} do %>
-    <span class="fas fa-plus-square"></span>
-  <% end %>
+</p>
 </div>
 
-<div class="card shadow mb-4">
+<!--finde datos de empelados al consltar-->
+<div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
   <div class="card-body">
     <div class="table-responsive">
-      <table id="tablaSurveysHistory" class="table table-bordered" width="90%">
-        <thead>
-        <tr>
-          <th>Temperatura</th>
-          <th>Tapabocas</th>
-          <th>Nuevo Tapabocas</th>
-          <th>Sintomas</th>
-          <th>Hora de Ingreso</th>
-          <th>Hora de Salida</th>
-          <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <% @surveys_history.each do |hist| %>
-          <tr id="survey_history_<% hist.id %>">
-            <td><%= hist.temperature %></td>
-            <td><%= hist.mask %></td>
-            <td><%= hist.new_mask %></td>
-            <td><%= hist.symptom %></td>
-            <td><%= hist.entry_time %></td>
-            <td><%= hist.departure_time %></td>
-            <td>
-              <%= link_to "Editar", edit_surveys_history_path(hist), html_options = {class: "btn btn-info btn-xs", remote: true}%>
-              <%#=  link_to "Borrar", hist, remote: true, method: :delete, data: { confirm: "¿Estas seguro que quieres borrar el empleado: #{hist.employee_id}?"}, class: "btn btn-danger btn-xs" %>
-            </td>
-          </tr>
-        <% end %>
-        </tbody>
-      </table>
+        <!-- formulario encuesta entrada-->
+      <form>
+        <div class="form-group">
+          <label for="exampleInputTempratura">Temperatura Registrada</label>
+          <input type="email" class="form-control" id="exampleInputTempratura" aria-describedby="emailHelp" placeholder="Ingrese temperatura ">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputNewTemperatura">Nueva toma de tempreatura</label>
+          <input type="email" class="form-control" id="exampleInputNewTemperatura" aria-describedby="emailHelp" placeholder="Ingrese nueva temperatura ">
+        </div>
+        <label style="align-items: center;
+            align-content: center;
+            flex-direction: column;
+            justify-content: center;
+            display: flex; ">Presenta los siguientes sintomas</label>
+        <div class="form-check">
+          <table id="tablaEmployees" class="table table-bordered" width="90%">
+
+            <tr>
+              <th>
+                <div>
+                  <label> Dolor de garganta</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="gargantaYes">
+                  <label class="form-check-label" for="gargantaYes">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="gargantaNot">
+                  <label class="form-check-label" for="gargantaNot">no</label>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <label> Congestiòn nasal</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="nasalYes">
+                  <label class="form-check-label" for="nasalYes">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="nasalNot">
+                  <label class="form-check-label" for="nasalNot">no</label>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <label> Dificultad par respirar</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="tosYes">
+                  <label class="form-check-label" for="TosYes">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="tosNot">
+                  <label class="form-check-label" for="tosNot">no</label>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <label> Dificultad par respirar</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="respirarYes">
+                  <label class="form-check-label" for="garganta">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="respirarNot">
+                  <label class="form-check-label" for="resperiarNot">no</label>
+                </div>
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <div>
+                  <label> tos</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="tosYes">
+                  <label class="form-check-label" for="TosYes">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="tosNot">
+                  <label class="form-check-label" for="tosNot">no</label>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <label> Dificultad par respirar</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="respirarYes">
+                  <label class="form-check-label" for="garganta">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="respirarNot">
+                  <label class="form-check-label" for="resperiarNot">no</label>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <label> tos</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="tosYes">
+                  <label class="form-check-label" for="TosYes">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="tosNot">
+                  <label class="form-check-label" for="tosNot">no</label>
+                </div>
+              </th>
+              <th>
+                <div>
+                  <label> Dificultad par respirar</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="respirarYes">
+                  <label class="form-check-label" for="garganta">si</label>
+                  <br>
+                  <input type="checkbox" class="form-check-input" id="respirarNot">
+                  <label class="form-check-label" for="resperiarNot">no</label>
+                </div>
+              </th>
+
+            </tr>
+          </table>
+          <!--text area-->
+          <label style="align-items: center;
+              align-content: center;
+              flex-direction: column;
+              justify-content: center;
+              display: flex;"> Describa otro sintoma</label>
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">GUARDAR</button>
+      </form>
     </div>
   </div>
 </div>
