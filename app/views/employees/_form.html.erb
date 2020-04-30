@@ -3,51 +3,42 @@
     <h4 class="control-label">Datos de los empleados: </h4>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:name].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :name, "Nombre: " %>
+  <div class="item form-group<%= @employee.errors[:document_number].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :document_number, "Documento de Identidad: " %>
     <div class="input-group">
-      <%= f.text_field :name, {:class => "form-control", :placeholder => "Introduzca el nombre del empleado"} %>
-      <%if @employee.errors[:name].any? %>
-        <p class="bg-danger"><%= @employee.errors[:name].to_s[/\w([^"]*)/] %></p>
+      <%= f.text_field :document_number, {:class => "form-control", :placeholder => "Introduzca el Documento de Identidad del empleado"} %>
+      <%if @employee.errors[:document_number].any? %>
+        <p class="bg-danger"><%= @employee.errors[:document_number].to_s[/\w([^"]*)/] %></p>
         <% end %>
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:last_name].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :last_name, "Apellido: " %>
+  <div class="item form-group<%= @employee.errors[:name].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :name, "Nombre: " %>
     <div class="input-group">
-      <%= f.text_field :last_name, {:class => "form-control", :placeholder => "Introduzca el apellido del empleado"} %>
-      <%if @employee.errors[:last_name].any? %>
-        <p class="bg-danger"><%= @employee.errors[:last_name].to_s[/\w([^"]*)/] %></p>
+      <%= f.text_field :name, {:class => "form-control", :placeholder => "Introduzca el Nombre del empleado"} %>
+      <%if @employee.errors[:name].any? %>
+        <p class="bg-danger"><%= @employee.errors[:name].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:document_type].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :document_type, "Typo de documento: " %>
+  <div class="item form-group<%= @employee.errors[:organizational_unit].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :organizational_unit, "Unidad Organizativa: " %>
     <div class="input-group">
-      <%= f.select(:document_type, options_for_select([['CC', 'Cédula de ciudadanía'], ['CE', '	Cédula de extranjería'], ['TI', '	Tarjeta de identidad'], ['PA', 'Pasaporte']]), {include_blank: 'Seleccionar'}, {class: "form-control"}) %>
-      <%if @employee.errors[:document_type].any? %>
+      <%= f.text_field :organizational_unit, {:class => "form-control", :placeholder => "Introduzca la Unidad Organizativa del empleado"} %>
+      <%if @employee.errors[:organizational_unit].any? %>
+        <p class="bg-danger"><%= @employee.errors[:organizational_unit].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:document_number].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :document_number, "Numero de documento: " %>
+  <div class="item form-group<%= @employee.errors[:position].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :position, "Cargo: " %>
     <div class="input-group">
-      <%= f.text_field :document_number, {:class => "form-control", :placeholder => "Introduzca el Numero de documento"} %>
-      <%if @employee.errors[:document_number].any? %>
-        <p class="bg-danger"><%= @employee.errors[:document_number].to_s[/\w([^"]*)/] %></p>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="item form-group<%= @employee.errors[:blood_type].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :blood_type, "Typo de sangre: " %>
-    <div class="input-group">
-      <%= f.text_field :blood_type, {:class => "form-control", :placeholder => "Introduzca el tipo sangre del empleado"} %>
-      <%if @employee.errors[:blood_type].any? %>
-        <p class="bg-danger"><%= @employee.errors[:blood_type].to_s[/\w([^"]*)/] %></p>
+      <%= f.text_field :position, {:class => "form-control", :placeholder => "Introduzca el Cargo del empleado"} %>
+      <%if @employee.errors[:position].any? %>
+        <p class="bg-danger"><%= @employee.errors[:position].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
@@ -61,45 +52,96 @@
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:position].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :position, "Cargo: " %>
+  <div class="item form-group<%= @employee.errors[:eps].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :eps, "EPS: " %>
     <div class="input-group">
-      <%= f.text_field :position, {:class => "form-control", :placeholder => "Introduzca el cargo del empleado"} %>
-      <%if @employee.errors[:position].any? %>
-        <p class="bg-danger"><%= @employee.errors[:position].to_s[/\w([^"]*)/] %></p>
+      <%= f.text_field :eps, {:class => "form-control", :placeholder => "Introduzca la EPS del empleado"} %>
+      <%if @employee.errors[:eps].any? %>
+        <p class="bg-danger"><%= @employee.errors[:eps].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:campus].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :campus, "Sede: " %>
+  <div class="item form-group<%= @employee.errors[:age].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :age, "Edad: " %>
     <div class="input-group">
-      <%= f.text_field :campus, {:class => "form-control", :placeholder => "Introduzca la sede del empleado"} %>
-      <%if @employee.errors[:campus].any? %>
-        <p class="bg-danger"><%= @employee.errors[:campus].to_s[/\w([^"]*)/] %></p>
+      <%= f.text_field :age, {:class => "form-control", :placeholder => "Introduzca la Edad del empleado"} %>
+      <%if @employee.errors[:age].any? %>
+        <p class="bg-danger"><%= @employee.errors[:age].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:email].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :email, "Email: " %>
+
+  <div class="item form-group<%= @employee.errors[:blood_type].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :blood_type, "Typo de sangre: " %>
     <div class="input-group">
-      <%= f.text_field :email, {:class => "form-control", :placeholder => "Introduzca el email del empleado"} %>
-      <%if @employee.errors[:email].any? %>
-        <p class="bg-danger"><%= @employee.errors[:email].to_s[/\w([^"]*)/] %></p>
+      <%= f.text_field :blood_type, {:class => "form-control", :placeholder => "Introduzca el tipo sangre del empleado"} %>
+      <%if @employee.errors[:blood_type].any? %>
+        <p class="bg-danger"><%= @employee.errors[:blood_type].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
 
-<!--  <div class="item form-group<%#= @employee.errors[:admin].any? ? ' has-error has-feedback' : '' %>">-->
-    <%#= f.label :admin, "Admin: " %>
-<!--    <div class="input-group">-->
-      <%#= f.text_field :admin, {:class => "form-control", :placeholder => "Introduzca si el empleado va hacer administrador"} %>
-      <%#if @employee.errors[:admin].any? %>
-<!--        <p class="bg-danger"><%#= @employee.errors[:admin].to_s[/\w([^"]*)/] %></p>-->
-      <%# end %>
-<!--    </div>-->
-<!--  </div>-->
+  <div class="item form-group<%= @employee.errors[:phone].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :phone, "Telefono de Contacto: " %>
+    <div class="input-group">
+      <%= f.text_field :phone, {:class => "form-control", :placeholder => "Introduzca el Telefono de Contacto del empleado"} %>
+      <%if @employee.errors[:phone].any? %>
+        <p class="bg-danger"><%= @employee.errors[:phone].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="item form-group<%= @employee.errors[:emergency_number].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :emergency_number, "Telefono en Caso de Emergencia: " %>
+    <div class="input-group">
+      <%= f.text_field :emergency_number, {:class => "form-control", :placeholder => "Introduzca el Telefono en Caso de Emergencia del empleado"} %>
+      <%if @employee.errors[:emergency_number].any? %>
+        <p class="bg-danger"><%= @employee.errors[:emergency_number].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="item form-group<%= @employee.errors[:weight].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :weight, "Peso: " %>
+    <div class="input-group">
+      <%= f.text_field :weight, {:class => "form-control", :placeholder => "Introduzca el Peso del empleado"} %>
+      <%if @employee.errors[:weight].any? %>
+        <p class="bg-danger"><%= @employee.errors[:weight].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="item form-group<%= @employee.errors[:size].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :size, "Talla: " %>
+    <div class="input-group">
+      <%= f.text_field :size, {:class => "form-control", :placeholder => "Introduzca la Talla del empleado"} %>
+      <%if @employee.errors[:size].any? %>
+        <p class="bg-danger"><%= @employee.errors[:size].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="item form-group<%= @employee.errors[:imc].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :imc, "IMC: " %>
+    <div class="input-group">
+      <%= f.text_field :imc, {:class => "form-control", :placeholder => "Introduzca el IMC del empleado"} %>
+      <%if @employee.errors[:imc].any? %>
+        <p class="bg-danger"><%= @employee.errors[:imc].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="item form-group<%= @employee.errors[:interpretation].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :interpretation, "Interpretacion: " %>
+    <div class="input-group">
+      <%= f.text_field :interpretation, {:class => "form-control", :placeholder => "Introduzca la Interpretacion del empleado"} %>
+      <%if @employee.errors[:interpretation].any? %>
+        <p class="bg-danger"><%= @employee.errors[:interpretation].to_s[/\w([^"]*)/] %></p>
+      <% end %>
+    </div>
+  </div>
 
   <div class="actions col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
     <%= f.submit @employee.new_record? ? "Crear Empleado" : "Actualizar Empleado", :class => "btn btn-success" %>

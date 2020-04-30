@@ -21,22 +21,6 @@ ActiveRecord::Schema.define(version: 2020_04_23_025652) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees", force: :cascade do |t|
-    t.string "name"
-    t.string "last_name"
-    t.string "document_type"
-    t.integer "document_number"
-    t.string "blood_type"
-    t.string "gender"
-    t.string "position"
-    t.integer "company_id"
-    t.string "campus"
-    t.string "email"
-    t.string "admin"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "survey_histories", force: :cascade do |t|
     t.datetime "entry_time"
     t.datetime "departure_time"
