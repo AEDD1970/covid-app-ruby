@@ -21,6 +21,30 @@ ActiveRecord::Schema.define(version: 2020_04_23_025652) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "employees", force: :cascade do |t|
+    t.string "responsible"
+    t.string "responsible_position"
+    t.integer "document_number"
+    t.string "name"
+    t.string "organizational_unit"
+    t.string "position"
+    t.string "contractor_company"
+    t.string "gender"
+    t.string "eps"
+    t.integer "age"
+    t.string "blood_type"
+    t.integer "phone"
+    t.integer "emergency_number"
+    t.string "weight"
+    t.string "size"
+    t.float "imc"
+    t.string "interpretation"
+    t.datetime "date_and_time"
+    t.integer "company_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "survey_histories", force: :cascade do |t|
     t.datetime "entry_time"
     t.datetime "departure_time"
