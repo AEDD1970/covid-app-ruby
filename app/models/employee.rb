@@ -1,4 +1,4 @@
 class Employee < ApplicationRecord
-  # belongs_to :company
-  has_many :survey_histories
+  #has_many :exit_surveys
+  #has_many :init_surveys
 end

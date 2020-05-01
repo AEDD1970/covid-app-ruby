@@ -1,10 +1,17 @@
 class InitSurveysController < ApplicationController
   before_action :set_init_survey, only: [:show, :edit, :update, :destroy]
+  include InitSurveysHelper
 
   # GET /init_surveys
   # GET /init_surveys.json
   def index
-    @init_surveys = InitSurvey.all
+    employee = params[:document_number].to_i
+    employees = Employee.find_by(document_number: employee)
+    if employees && employees.document_number == employee
+    @employees= Employee.all
+    else
+      ##tengo que buscar una forma de mandar un alerta desde aca
+    end
   end
 
   # GET /init_surveys/1

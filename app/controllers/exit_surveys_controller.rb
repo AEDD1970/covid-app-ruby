@@ -4,7 +4,13 @@ class ExitSurveysController < ApplicationController
   # GET /exit_surveys
   # GET /exit_surveys.json
   def index
-    @exit_surveys = ExitSurvey.all
+    employee = params[:document_number].to_i
+    employees = Employee.find_by(document_number: employee)
+    if employees && employees.document_number == employee
+      @employees= Employee.all
+    else
+
+    end
   end
 
   # GET /exit_surveys/1

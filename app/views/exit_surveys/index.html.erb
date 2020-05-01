@@ -8,12 +8,55 @@
 </h5>
 </div>
 <form class="form-inline" style="margin-left: 9%!important">
-  <div class="form-group mx-sm-3 mb-2" >
-    <input type="number" class="form-control" id="inputPassword2" placeholder="Cedula">
-  </div>
-  <button type="submit" class="btn btn-primary mb-2">Buscar Cedula</button>
+  <%= form_with do |inf| %>
+    <div class="form-group mx-sm-3 mb-2" >
+      <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese Cedula"} %>
+    </div>
+    <%= inf.submit "buscar", :class => "button", :onclick => "alert('Encuesta de entrada guardada)"%>
+  <% end %>
 </form>
 
+
+<!-- info de busqueda-->
+<div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
+  <div class="card-body">
+
+    <table id="tablaEmployees" class="table table-bordered" width="90%">
+      <thead>
+      <tr>
+        <th>Documento de Identidad</th>
+        <th>Nombre</th>
+        <th>Unidad Organizativa</th>
+        <th>Cargo</th>
+        <th>Genero</th>
+        <th>EPS</th>
+        <th>Edad</th>
+        <th>Grupo Sanguineo</th>
+        <th>Telefono de Contacto</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% if @employees %>
+        <% @employees.each do |emp| %>
+          <tr id="employee_<% emp.id %>">
+            <td><%= emp.document_number %></td>
+            <td><%= emp.name %></td>
+            <td><%= emp.organizational_unit %></td>
+            <td><%= emp.position %></td>
+            <td><%= emp.gender %></td>
+            <td><%= emp.eps %></td>
+            <td><%= emp.age %></td>
+            <td><%= emp.blood_type %></td>
+            <td><%= emp.phone %></td>
+          </tr>
+        <% end %>
+      <%else %>
+        <h1></h1>
+      <%end %>
+      </tbody>
+    </table>
+  </div>
+</div>
 <div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
   <div class="card-body">
     <div class="table-responsive">
