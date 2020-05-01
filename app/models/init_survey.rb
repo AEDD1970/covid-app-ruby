@@ -1,0 +1,2 @@
+class InitSurvey < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class ExitSurvey < ApplicationRecord
+end

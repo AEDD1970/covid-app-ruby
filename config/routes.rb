@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :init_surveys
+  resources :exit_surveys
   devise_for :users
   root to: 'home#index'
   resources :employees

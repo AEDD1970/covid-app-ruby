@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sore throat:</strong>
+  <%= @exit_survey.Sore_throat %>
+</p>
+
+<p>
+  <strong>Nasal congestion:</strong>
+  <%= @exit_survey.Nasal_congestion %>
+</p>
+
+<p>
+  <strong>Cough:</strong>
+  <%= @exit_survey.Cough %>
+</p>
+
+<p>
+  <strong>Difficulty breathing:</strong>
+  <%= @exit_survey.Difficulty_breathing %>
+</p>
+
+<p>
+  <strong>Fatigue:</strong>
+  <%= @exit_survey.Fatigue %>
+</p>
+
+<p>
+  <strong>Shaking chills:</strong>
+  <%= @exit_survey.Shaking_chills %>
+</p>
+
+<p>
+  <strong>Muscle pain:</strong>
+  <%= @exit_survey.Muscle_pain %>
+</p>
+
+<p>
+  <strong>Another:</strong>
+  <%= @exit_survey.Another %>
+</p>
+
+<p>
+  <strong>Respiratory:</strong>
+  <%= @exit_survey.respiratory %>
+</p>
+
+<%= link_to 'Edit', edit_exit_survey_path(@exit_survey) %> |
+<%= link_to 'Back', exit_surveys_path %>

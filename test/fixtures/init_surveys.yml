@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sore_throat_init: MyString
+  nasal_congestion_init: MyString
+  cough_init: MyString
+  difficulty_breathing_init: MyString
+  fatigue_init: MyString
+  shaking_chills_init: MyString
+  muscle_pain_init: MyString
+  another_init: MyString
+  respiratory_init: MyString
+  temperature_init: MyString
+  new_temperature_init: MyString
+
+two:
+  sore_throat_init: MyString
+  nasal_congestion_init: MyString
+  cough_init: MyString
+  difficulty_breathing_init: MyString
+  fatigue_init: MyString
+  shaking_chills_init: MyString
+  muscle_pain_init: MyString
+  another_init: MyString
+  respiratory_init: MyString
+  temperature_init: MyString
+  new_temperature_init: MyString
