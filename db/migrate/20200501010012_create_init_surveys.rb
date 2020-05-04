@@ -12,6 +12,7 @@ class CreateInitSurveys < ActiveRecord::Migration[5.2]
       t.string :respiratory_init
       t.string :temperature_init
       t.string :new_temperature_init
+      t.integer :employee_id
 
       t.timestamps
     end

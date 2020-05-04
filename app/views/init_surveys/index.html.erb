@@ -43,7 +43,7 @@
           <td><%= emp.name %></td>
           <td><%= emp.organizational_unit %></td>
           <td><%= emp.position %></td>
-          <td><%= emp.gender %></td>
+          <td><%= emp.gender.description %></td>
           <td><%= emp.eps %></td>
           <td><%= emp.age %></td>
           <td><%= emp.blood_type %></td>
@@ -210,7 +210,7 @@
               <%= form.text_area :respiratory, {:class => "form-control", :rows => "3" } %>
             </div>
             <div class="btn btn-primary">
-              <%= form.submit "guardar", :class => "button", data: { confirm: 'desea guardar la encuesta ?' } %>
+              <%= form.submit "guardar", :class => "button" %>
             </div>
           <% end %>
         </div>

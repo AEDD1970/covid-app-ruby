@@ -12,6 +12,7 @@ class CreateExitSurveys < ActiveRecord::Migration[5.2]
       t.string :respiratory
       t.string :temperature
       t.string :new_temperature
+      t.integer :employee_id
 
       t.timestamps
     end

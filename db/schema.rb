@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_005015) do
-
+ActiveRecord::Schema.define(version: 2020_05_01_010012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,10 +45,6 @@ ActiveRecord::Schema.define(version: 2020_05_01_005015) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "genders", force: :cascade do |t|
-    t.string "description"
-  end
-
   create_table "exit_surveys", force: :cascade do |t|
     t.string "Sore_throat"
     t.string "Nasal_congestion"
@@ -62,12 +57,15 @@ ActiveRecord::Schema.define(version: 2020_05_01_005015) do
     t.string "respiratory"
     t.string "temperature"
     t.string "new_temperature"
+    t.integer "employee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "interpretations", force: :cascade do |t|
+  create_table "genders", force: :cascade do |t|
     t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "init_surveys", force: :cascade do |t|
@@ -82,6 +80,13 @@ ActiveRecord::Schema.define(version: 2020_05_01_005015) do
     t.string "respiratory_init"
     t.string "temperature_init"
     t.string "new_temperature_init"
+    t.integer "employee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interpretations", force: :cascade do |t|
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
