@@ -1,19 +1,13 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:edit, :update, :destroy]
-  # before_action :set_document_number, only: [:show]
 
   def index
-    @employees = Employee.all
-  end
-
-  def show
-    # number = params[:document_number]
-    # puts "inspect ------------<<<<<<<<<<<<<<<<#{number.inspect}"
-    # if number
-    #   @employee = Employee.where('document_number LIKE ?', "%#{number}%")
-    # else
-    #   @employee = Employee.all
-    # end
+    if params[:search].blank?
+      @employees = Employee.all
+    else
+      @parameter = params[:search]
+      @employees = Employee.where(:document_number => @parameter)
+    end
   end
 
   def new

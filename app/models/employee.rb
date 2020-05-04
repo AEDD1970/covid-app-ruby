@@ -4,5 +4,4 @@ class Employee < ActiveRecord::Base
   has_many :exit_surveys
   has_many :init_surveys
   # belongs_to :company
-
 end

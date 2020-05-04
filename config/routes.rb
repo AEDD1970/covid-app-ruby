@@ -11,9 +11,11 @@ Rails.application.routes.draw do
    end
   devise_for :users
   root to: 'home#index'
-  resources :employees #, only: [:index, :create, :update, :destroy, :edit, :new] do
-
-# end
+  resources :employees , only: [:index, :create, :update, :destroy, :edit, :new] do
+    collection do
+      get '/search' => 'employees#index', :as => 'search'
+    end
+end
   resources :surveys_history
 
   # resources :employees, only: [:index, :create, :update, :destroy, :edit] do

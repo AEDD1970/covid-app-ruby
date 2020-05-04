@@ -7,14 +7,17 @@
   <h1 class="fas fa-user-friends"></h1>
 </h5>
 </div>
-<!--  <div class="form-group col-md-4">-->
-    <%#= form_tag( employees_path method: :get) do %>
-      <%#= text_field_tag :document_number, params[:document_number], {:class => "form-control", :placeholder => "Documento de identidad"} %>
-      <%#= puts "Este ------------<<<<<<<<<<<<<<<<#{params[:document_number].inspect}" %>
-      <%#= submit_tag('Buscar', :class => "btn btn-primary mb-2") %>
-    <%# end %>
-<!--  </div>-->
-<div>
+<h1>Employee</h1>
+<%= form_tag(search_employees_path, :method => "get",
+             class: 'navbar-form navbar-left') do %>
+  <div class="input-group", id="searchEmployee">
+    <%= search_field_tag :search, params[:search], placeholder: "Buscar Empleado Por el Numero de Documento", class: "form-control" %>
+    <div class="input-group-btn">
+      <%= button_tag "Bustar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
+    </div>
+  </div>
+<% end %>
+<div style="margin-top: 5%">
   <%= link_to new_employee_path, {remote: true, class: "btn btn-info", id: "anadir-employee-btn"} do %>
     <span>Registro</span>
     <% end %>
@@ -25,6 +28,7 @@
     <div class="table-responsive">
       <table id="tablaEmployees" class="table table-bordered" width="90%">
         <thead>
+
           <tr>
             <th>Documento de Identidad</th>
             <th>Nombre</th>
