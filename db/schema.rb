@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_05_01_005015) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,12 +48,40 @@ ActiveRecord::Schema.define(version: 2020_05_01_005015) do
 
   create_table "genders", force: :cascade do |t|
     t.string "description"
+  end
+
+  create_table "exit_surveys", force: :cascade do |t|
+    t.string "Sore_throat"
+    t.string "Nasal_congestion"
+    t.string "Cough"
+    t.string "Difficulty_breathing"
+    t.string "Fatigue"
+    t.string "Shaking_chills"
+    t.string "Muscle_pain"
+    t.string "Another"
+    t.string "respiratory"
+    t.string "temperature"
+    t.string "new_temperature"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "interpretations", force: :cascade do |t|
     t.string "description"
+  end
+
+  create_table "init_surveys", force: :cascade do |t|
+    t.string "sore_throat_init"
+    t.string "nasal_congestion_init"
+    t.string "cough_init"
+    t.string "difficulty_breathing_init"
+    t.string "fatigue_init"
+    t.string "shaking_chills_init"
+    t.string "muscle_pain_init"
+    t.string "another_init"
+    t.string "respiratory_init"
+    t.string "temperature_init"
+    t.string "new_temperature_init"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

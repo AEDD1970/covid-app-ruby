@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  resources :init_surveys, only: [:index, :create, :show, :destroy, :update] do
+    collection do
+      post '/', action: :index
+    end
+  end
+  resources :exit_surveys, only: [:index, :create, :show, :destroy, :update] do
+  collection do
+    post '/', action: :index
+     end
+   end
   devise_for :users
   root to: 'home#index'
   resources :employees #, only: [:index, :create, :update, :destroy, :edit, :new] do
