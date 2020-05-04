@@ -43,11 +43,11 @@
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:gender].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :gender, "Genero: " %>
+  <div class="item form-group<%= @employee.errors[:gender_id].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :gender_id, "Genero: " %>
     <div class="input-group">
-      <%= f.select(:gender, options_for_select([['Masculino', 'Masculino'], ['Femenino', 'Femenino']]), {include_blank: 'Seleccionar'}, {class: "form-control"}) %>
-      <%if @employee.errors[:gender].any? %>
+      <%= f.collection_select :gender_id, Gender.all, :id, :description, { :prompt => "Seleccionar" }, { :class => "form-control"  }%>
+      <%if @employee.errors[:gender_id].any? %>
       <% end %>
     </div>
   </div>
@@ -88,7 +88,7 @@
     <div class="input-group">
       <%= f.text_field :phone, {:class => "form-control", :placeholder => "Introduzca el Telefono de Contacto del empleado"} %>
       <%if @employee.errors[:phone].any? %>
-        <p class="bg-danger"><%= @employee.errors[:phone].to_s[/\w([^"]*)/] %></p>
+<!--        <p class="bg-danger"><%#= @employee.errors[:phone].to_s[/\w([^"]*)/] %></p>-->
       <% end %>
     </div>
   </div>
@@ -98,7 +98,7 @@
     <div class="input-group">
       <%= f.text_field :emergency_number, {:class => "form-control", :placeholder => "Introduzca el Telefono en Caso de Emergencia del empleado"} %>
       <%if @employee.errors[:emergency_number].any? %>
-        <p class="bg-danger"><%= @employee.errors[:emergency_number].to_s[/\w([^"]*)/] %></p>
+<!--        <p class="bg-danger"><%#= @employee.errors[:emergency_number].to_s[/\w([^"]*)/] %></p>-->
       <% end %>
     </div>
   </div>
@@ -107,6 +107,9 @@
     <%= f.label :weight, "Peso: " %>
     <div class="input-group">
       <%= f.text_field :weight, {:class => "form-control", :placeholder => "Introduzca el Peso del empleado"} %>
+      <div class="input-group-append">
+        <span class="input-group-text">KG</span>
+      </div>
       <%if @employee.errors[:weight].any? %>
         <p class="bg-danger"><%= @employee.errors[:weight].to_s[/\w([^"]*)/] %></p>
       <% end %>
@@ -133,15 +136,24 @@
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:interpretation].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :interpretation, "Interpretacion: " %>
+  <div class="item form-group<%= @employee.errors[:interpretation_id].any? ? ' has-error has-feedback' : '' %>">
+    <%= f.label :interpretation_id, "Interpretacion: " %>
     <div class="input-group">
-      <%= f.text_field :interpretation, {:class => "form-control", :placeholder => "Introduzca la Interpretacion del empleado"} %>
-      <%if @employee.errors[:interpretation].any? %>
-        <p class="bg-danger"><%= @employee.errors[:interpretation].to_s[/\w([^"]*)/] %></p>
+      <%= f.collection_select :interpretation_id, Interpretation.all, :id, :description, { :prompt => "Seleccionar" }, { :class => "form-control"  }%>
+      <%if @employee.errors[:interpretation_id].any? %>
+        <p class="bg-danger"><%= @employee.errors[:interpretation_id].to_s[/\w([^"]*)/] %></p>
       <% end %>
     </div>
   </div>
+
+<!--  <div class="item form-group<%#= @employee.errors[:gender].any? ? ' has-error has-feedback' : '' %>">-->
+    <%#= f.label :gender, "Sintomas: " %>
+<!--    <div class="input-group">-->
+      <%#= f.check_box :gender, {}, "false",{:multiple => true} %>
+      <%#if @employee.errors[:gender].any? %>
+      <%# end %>
+<!--    </div>-->
+<!--  </div>-->
 
   <div class="actions col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
     <%= f.submit @employee.new_record? ? "Crear Empleado" : "Actualizar Empleado", :class => "btn btn-success" %>

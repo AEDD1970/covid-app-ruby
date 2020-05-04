@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'home#index'
-  resources :employees
+  resources :employees #, only: [:index, :create, :update, :destroy, :edit, :new] do
+
+# end
   resources :surveys_history
+
   # resources :employees, only: [:index, :create, :update, :destroy, :edit] do
   #   collection do
   #     # post "employee", action: :new

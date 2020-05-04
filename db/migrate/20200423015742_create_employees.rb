@@ -8,17 +8,17 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
       t.string :organizational_unit
       t.string :position
       t.string :contractor_company
-      t.string :gender
+      t.string :gender_id
       t.string :eps
       t.integer :age
       t.string :blood_type
-      t.integer :phone
-      t.integer :emergency_number
+      t.integer :phone, :limit => 8
+      t.integer :emergency_number, :limit => 8
       t.string :weight
       t.string :size
       t.float :imc
-      t.string :interpretation
-      t.datetime :date_and_time
+      t.string :interpretation_id
+      t.string :date_and_time
       t.integer :company_id
 
       t.timestamps

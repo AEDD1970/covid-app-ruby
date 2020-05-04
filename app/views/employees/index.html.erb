@@ -7,7 +7,13 @@
   <h1 class="fas fa-user-friends"></h1>
 </h5>
 </div>
-
+<!--  <div class="form-group col-md-4">-->
+    <%#= form_tag( employees_path method: :get) do %>
+      <%#= text_field_tag :document_number, params[:document_number], {:class => "form-control", :placeholder => "Documento de identidad"} %>
+      <%#= puts "Este ------------<<<<<<<<<<<<<<<<#{params[:document_number].inspect}" %>
+      <%#= submit_tag('Buscar', :class => "btn btn-primary mb-2") %>
+    <%# end %>
+<!--  </div>-->
 <div>
   <%= link_to new_employee_path, {remote: true, class: "btn btn-info", id: "anadir-employee-btn"} do %>
     <span class="fas fa-plus-square"></span>
@@ -43,7 +49,7 @@
                 <td><%= emp.name %></td>
                 <td><%= emp.organizational_unit %></td>
                 <td><%= emp.position %></td>
-                <td><%= emp.gender %></td>
+                <td><%= emp.gender.description %></td>
                 <td><%= emp.eps %></td>
                 <td><%= emp.age %></td>
                 <td><%= emp.blood_type %></td>
@@ -52,7 +58,7 @@
                 <td><%= emp.weight %></td>
                 <td><%= emp.size %></td>
                 <td><%= emp.imc %></td>
-                <td><%= emp.interpretation %></td>
+                <td><%= emp.interpretation.description %></td>
                   <td>
                     <%= link_to "Editar", edit_employee_path(emp), html_options = {class: "btn btn-info btn-xs", remote: true}%>
                     <%= link_to "Borrar", emp, remote: true, method: :delete, data: { confirm: "¿Estas seguro que quieres borrar el empleado: #{emp.name}?"}, class: "btn btn-danger btn-xs" %>
