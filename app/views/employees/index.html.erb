@@ -7,13 +7,13 @@
   <h1 class="fas fa-user-friends"></h1>
 </h5>
 </div>
-<h1>Employee</h1>
+<p style="font-size: 20px">Busqueda de Empleados</p>
 <%= form_tag(search_employees_path, :method => "get",
              class: 'navbar-form navbar-left') do %>
   <div class="input-group", id="searchEmployee">
-    <%= search_field_tag :search, params[:search], placeholder: "Buscar Empleado Por el Numero de Documento", class: "form-control" %>
+    <%= search_field_tag :search, params[:search], placeholder: "Buscar Empleado Por el Numero de Documento", class: "form-control col-md-4" %>
     <div class="input-group-btn">
-      <%= button_tag "Bustar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
+      <%= button_tag "Buscar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
     </div>
   </div>
 <% end %>

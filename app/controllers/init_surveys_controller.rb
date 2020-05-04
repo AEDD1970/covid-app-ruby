@@ -8,7 +8,9 @@ class InitSurveysController < ApplicationController
     employee = params[:document_number].to_i
     employees = Employee.find_by(document_number: employee)
     if employees && employees.document_number == employee
-    @employees= Employee.all
+      @data = employees.id
+      puts  "#{@data.pretty_inspect} aqui imprime data"
+    @employees= Employee.where(id: @data)
     else
       ##tengo que buscar una forma de mandar un alerta desde aca
     end
@@ -31,7 +33,9 @@ class InitSurveysController < ApplicationController
   # POST /init_surveys
   # POST /init_surveys.json
   def create
+    byebug
     @init_survey = InitSurvey.new(init_survey_params)
+    @init_survey.employee_id = @data
 
     respond_to do |format|
       if @init_survey.save
@@ -76,6 +80,6 @@ class InitSurveysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def init_survey_params
-      params.require(:init_survey).permit(:sore_throat_init, :nasal_congestion_init, :cough_init, :difficulty_breathing_init, :fatigue_init, :shaking_chills_init, :muscle_pain_init, :another_init, :respiratory_init, :temperature_init, :new_temperature_init)
+      params.require(:init_survey).permit(:sore_throat_init, :nasal_congestion_init, :cough_init, :difficulty_breathing_init, :fatigue_init, :shaking_chills_init, :muscle_pain_init, :another_init, :respiratory_init, :temperature_init, :new_temperature_init, :employee_id)
     end
 end

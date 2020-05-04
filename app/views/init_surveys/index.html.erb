@@ -56,9 +56,6 @@
       </tbody>
     </table>
 
-
-
-
   </div>
 </div>
 
@@ -69,7 +66,8 @@
       <form>
 
         <div class="form-check" style="padding: 0!important;">
-          <%= form_with do |form| %>
+          <%= form_with  do |form| %>
+
             <div class="form-group">
               <%= form.label :temperature_init, 'Temperatura registrada'%>
               <%= form.text_field  :temperature_init, {:class => "form-control", :placeholder =>"Ingrese temperatura ºC "} %>
