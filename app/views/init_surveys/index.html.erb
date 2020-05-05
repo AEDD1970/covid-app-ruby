@@ -12,7 +12,7 @@
   <div class="form-group mx-sm-3 mb-2" >
     <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese Cedula"} %>
   </div>
-    <%= inf.submit "buscar", :class => "button", :onclick => "alert('Encuesta de entrada guardada)"%>
+    <%= inf.submit "Buscar", :class => "button", :onclick => "alert('Encuesta de entrada guardada)"%>
   <% end %>
 </form>
 
@@ -21,7 +21,7 @@
 <div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
   <div class="card-body">
 
-    <table id="tablaEmployees" class="table table-bordered" width="90%">
+    <table id="tablaEmployees" class="table table-bordered table-responsive" width="90%">
       <thead>
       <tr>
         <th>Documento de Identidad</th>
@@ -69,73 +69,82 @@
           <%= form_with  do |form| %>
 
             <div class="form-group">
-              <%= form.label :temperature_init, 'Temperatura registrada'%>
+              <%= form.label :temperature_init, 'Temperatura registrada',{:style => "font-size: 21px"}%>
               <%= form.text_field  :temperature_init, {:class => "form-control", :placeholder =>"Ingrese temperatura ºC "} %>
             </div>
             <div class="form-group">
-              <%= form.label :new_temperature_init, 'Temperatura nueva registrada'%>
+              <%= form.label :new_temperature_init, 'Temperatura nueva registrada',{:style => "font-size: 21px"}%>
               <%= form.text_field  :new_temperature_init, {:class => "form-control", :placeholder =>"Ingrese nueva temperatura ºC "} %>
             </div>
             <label style="align-items: center;
                 align-content: center;
                 flex-direction: column;
                 justify-content: center;
+                font-size: 21px;
                 display: flex; ">Presenta los siguientes sintomas</label>
             <table id="tablaEmployees" class="table table-bordered" width="90%">
               <tr>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label> Dolor de garganta</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :sore_throat_init, 'Si'%>
-                      <%= form.check_box :sore_throat_init,{},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :sore_throat_init, 'No'%>
-                      <%= form.check_box :sore_throat_init,{},"no",{:class => "form-control"} %>
+                    <label class="controle-init"> Dolor de garganta</label>
+
+                    <div class="table-label-int">
+                       <div>
+                      <%= form.label :sore_throat_init, 'Si',{:style => "font-size: 21px"}%>
+                      <%= form.check_box :sore_throat_init,{},"si",{:class => "form-check-init"} %>
+                       </div>
+                      <div>
+                      <%= form.label :sore_throat_init, 'No',{:style => "font-size: 21px"}%>
+                      <%= form.check_box :sore_throat_init,{},"no", :style => "width: 50px; height: 50px;" %>
+                      </div>
                     </div>
                   </div>
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label>Congestiòn nasal</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :nasal_congestion_init, 'Si'%>
+                    <label class="controle-init">Congestiòn nasal</label>
+
+                    <div class="table-label-int">
+                      <div>
+                      <%= form.label :nasal_congestion_init, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :nasal_congestion_init,{},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :nasal_congestion_init, 'No'%>
+                      </div>
+                      <div>
+                      <%= form.label :nasal_congestion_init, 'No' ,{:style => "font-size: 21px"}%>
                       <%= form.check_box :nasal_congestion_init,{},"no",{:class => "form-control"} %>
+                      </div>
                     </div>
                   </div>
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label>Tos</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :cough_init, 'Si'%>
+                    <label class="controle-init">Tos</label>
+
+                    <div class="table-label-int">
+                      <div>
+                      <%= form.label :cough_init, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :cough_init,{},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :cough_init,'No'%>
+                      </div>
+                      <div>
+                      <%= form.label :cough_init,'No',{:style => "font-size: 21px"}%>
                       <%= form.check_box :cough_init,{},"no",{:class => "form-control"} %>
+                      </div>
                     </div>
                   </div>
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label>Dificulta para respirar</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :difficulty_breathing_init, 'Si'%>
+                    <label class="controle-init">Dificulta para respirar</label>
+
+                    <div class="table-label-int">
+                      <div>
+                      <%= form.label :difficulty_breathing_init, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :difficulty_breathing_init,{},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :difficulty_breathing_init,'No'%>
+                      </div>
+                      <div>
+                      <%= form.label :difficulty_breathing_init,'No',{:style => "font-size: 21px"}%>
                       <%= form.check_box :difficulty_breathing_init,{},"no",{:class => "form-control"} %>
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -143,57 +152,65 @@
               <tr>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label>Fatiga</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :fatigue_init, 'Si'%>
+                    <label class="controle-init">Fatiga</label>
+
+                    <div class="table-label-int">
+                      <div>
+                      <%= form.label :fatigue_init, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :fatigue_init,{},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :fatigue_init,'No'%>
+                      </div>
+                      <div>
+                      <%= form.label :fatigue_init,'No',{:style => "font-size: 21px"}%>
                       <%= form.check_box :fatigue_init,{},"no",{:class => "form-control"} %>
+                      </div>
                     </div>
                   </div>
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label>Escalofrios</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :shaking_chills_init , 'Si'%>
+                    <label class="controle-init">Escalofrios</label>
+
+                    <div class="table-label-int">
+                      <div>
+                      <%= form.label :shaking_chills_init , 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :shaking_chills_init, {},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :shaking_chills_init,'No'%>
+                      </div>
+                      <div>
+                      <%= form.label :shaking_chills_init,'No',{:style => "font-size: 21px"}%>
                       <%= form.check_box :shaking_chills_init ,{},"no",{:class => "form-control"} %>
+                      </div>
                     </div>
                   </div>
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label>Dolor de musculo</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :muscle_pain_init , 'Si'%>
+                    <label class="controle-init">Dolor de musculo</label>
+
+                    <div class="table-label-int">
+                      <div>
+                      <%= form.label :muscle_pain_init , 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :muscle_pain_init, {},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :muscle_pain_init,'No'%>
+                      </div>
+                      <div>
+                      <%= form.label :muscle_pain_init,'No',{:style => "font-size: 21px"}%>
                       <%= form.check_box :muscle_pain_init,{},"no",{:class => "form-control"} %>
+                      </div>
                     </div>
                   </div>
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label>Otro sintoma respiratorio</label>
-                    <br>
-                    <div style="margin-left: 15%">
-                      <%= form.label :another_init , 'Si'%>
+                    <label class="controle-init">Otro sintoma respiratorio </label>
+
+                    <div class="table-label-int">
+                      <div>
+                      <%= form.label :another_init , 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :another_init, {},"si",{:class => "form-control"} %>
-                    </div>
-                    <div style="margin-left: 15%">
-                      <%= form.label :another_init,'No'%>
+                      </div>
+                      <div>
+                      <%= form.label :another_init,'No',{:style => "font-size: 21px"}%>
                       <%= form.check_box :another_init,{},"no",{:class => "form-control"} %>
+                      </div>
                     </div>
                   </div>
                 </th>
@@ -203,12 +220,13 @@
                 align-content: center;
                 flex-direction: column;
                 justify-content: center;
+                font-size: 21px;
                 display: flex;"> Describa el sintoma</label>
             <div class="form-group">
               <%= form.text_area :respiratory, {:class => "form-control", :rows => "3" } %>
             </div>
             <div class="btn btn-primary">
-              <%= form.submit "guardar", :class => "button" %>
+              <%= form.submit "Guardar", :class => "button" %>
             </div>
           <% end %>
         </div>

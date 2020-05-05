@@ -7,9 +7,10 @@ class ExitSurveysController < ApplicationController
     employee = params[:document_number].to_i
     employees = Employee.find_by(document_number: employee)
     if employees && employees.document_number == employee
-      @employees= Employee.all
+      @data = employees.id
+      @employees= Employee.where(id: @data)
     else
-
+      ##tengo que buscar una forma de mandar un alerta desde aca
     end
   end
 

@@ -1,3 +1,28 @@
 // Place all the styles related to the init_surveys controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.controle-init{
+ align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 21px;
+  display: flex;
+}
+
+.table-label-int{
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 21px;
+  display: flex;
+}
+.table th {
+  padding-bottom: 0px !important;
+}
+input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+}

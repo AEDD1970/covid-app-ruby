@@ -9,7 +9,6 @@ class InitSurveysController < ApplicationController
     employees = Employee.find_by(document_number: employee)
     if employees && employees.document_number == employee
       @data = employees.id
-      puts  "#{@data.pretty_inspect} aqui imprime data"
     @employees= Employee.where(id: @data)
     else
       ##tengo que buscar una forma de mandar un alerta desde aca
