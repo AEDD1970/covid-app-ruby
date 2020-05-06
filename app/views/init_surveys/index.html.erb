@@ -3,14 +3,14 @@
     flex-direction: column;
     justify-content: center;
     display: flex; margin-top: 5%"><h5
-  class="h3 mb-2 text-gray-800 ">Encuesta de entrada
+  class="h3 mb-2 text-gray-800 "> Encuesta de entrada
   <h1 class="fas fa-poll"></h1>
 </h5>
 </div>
 <form class="form-inline" style="margin-left: 9%!important">
   <%= form_with do |inf| %>
   <div class="form-group mx-sm-3 mb-2" >
-    <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese Cèdula"} %>
+    <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese número de documento"} %>
   </div>
     <%= inf.submit "Buscar", :class => "button", :onclick => "alert('Encuesta de entrada guardada)"%>
   <% end %>
@@ -32,7 +32,7 @@
         <th><b>EPS</b></th>
         <th><b>Edad</b></th>
         <th><b>Grupo Sanguíneo</b></th>
-        <th><b>Telèfono de Contacto</b></th>
+        <th><b>Teléfono de Contacto</b></th>
       </tr>
       </thead>
       <tbody>
@@ -70,23 +70,23 @@
 
             <div class="form-group">
               <%= form.label :temperature_init, 'Temperatura registrada',{:style => "font-size: 21px"}%>
-              <%= form.text_field  :temperature_init, {:class => "form-control", :placeholder =>"Ingrese temperatura ºC "} %>
+              <%= form.text_field  :temperature_init, {:class => "form-control", :placeholder =>"Ingrese temperatura en ºC "} %>
             </div>
             <div class="form-group">
               <%= form.label :new_temperature_init, 'Temperatura nueva registrada',{:style => "font-size: 21px"}%>
-              <%= form.text_field  :new_temperature_init, {:class => "form-control", :placeholder =>"Ingrese nueva temperatura ºC "} %>
+              <%= form.text_field  :new_temperature_init, {:class => "form-control", :placeholder =>"Ingrese nueva temperatura en ºC "} %>
             </div>
             <label style="align-items: center;
                 align-content: center;
                 flex-direction: column;
                 justify-content: center;
                 font-size: 21px;
-                display: flex; ">Presenta los Siguientes Síntomas</label>
+                display: flex; ">Presenta los siguientes síntomas</label>
             <table id="tablaEmployees" class="table table-bordered" width="90%">
               <tr>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init"> Dolor de Garganta</label>
+                    <label class="controle-init"> Dolor de garganta</label>
 
                     <div class="table-label-int">
                        <div>
@@ -102,7 +102,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Congestión Nasal</label>
+                    <label class="controle-init">Congestión nasal</label>
 
                     <div class="table-label-int">
                       <div>
@@ -134,7 +134,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Dificultad para Respirar</label>
+                    <label class="controle-init">Dificultad para respirar</label>
 
                     <div class="table-label-int">
                       <div>
@@ -184,7 +184,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Dolor de Músculos</label>
+                    <label class="controle-init">Dolor de músculos</label>
 
                     <div class="table-label-int">
                       <div>
@@ -200,7 +200,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Otro Síntoma Respiratorio </label>
+                    <label class="controle-init">Otro síntoma respiratorio </label>
 
                     <div class="table-label-int">
                       <div>
@@ -221,7 +221,7 @@
                 flex-direction: column;
                 justify-content: center;
                 font-size: 21px;
-                display: flex;"> Describa el Síntoma</label>
+                display: flex;"> Describa el síntoma</label>
             <div class="form-group">
               <%= form.text_area :respiratory_init, {:class => "form-control", :rows => "3" } %>
             </div>
@@ -295,11 +295,11 @@
 
             <label class="controle-exit"> Otro elemento</label>
             <div class="form-group">
-              <%= form.text_field  :other_element_init, {:class => "form-control", :placeholder =>"Describa cual? "} %>
+              <%= form.text_field  :other_element_init, {:class => "form-control", :placeholder =>"¿Cuál? "} %>
             </div>
             <label class="controle-exit"> No aplica</label>
             <div class="form-group">
-              <%= form.text_field  :not_other_element_init, {:class => "form-control", :placeholder =>"Por qué? "} %>
+              <%= form.text_field  :not_other_element_init, {:class => "form-control", :placeholder =>"¿Por qué?"} %>
             </div>
 
             <div class="btn btn-primary">
