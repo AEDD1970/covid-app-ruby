@@ -15,7 +15,7 @@ class InitSurveysController < ApplicationController
     end
   end
 
-  # GET /init_surveys/1 1
+  # GET /init_surveys/1 1 0 0
   # GET /init_surveys/1.json
   def show
   end
