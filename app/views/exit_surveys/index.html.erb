@@ -10,7 +10,7 @@
 <form class="form-inline" style="margin-left: 9%!important">
   <%= form_with do |inf| %>
     <div class="form-group mx-sm-3 mb-2" >
-      <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese Cedula"} %>
+      <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese Cèdula"} %>
     </div>
     <%= inf.submit "Buscar", :class => "button", :onclick => "alert('Encuesta de entrada guardada)"%>
   <% end %>
@@ -21,18 +21,18 @@
 <div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
   <div class="card-body">
 
-    <table id="tablaEmployees" class="table table-bordered table-responsive">
+    <table id="tablaEmployees" class="table table-bordered table-responsive boder-table-t">
       <thead>
       <tr>
-        <th>Documento de Identidad</th>
-        <th>Nombre</th>
-        <th>Unidad Organizativa</th>
-        <th>Cargo</th>
-        <th>Genero</th>
-        <th>EPS</th>
-        <th>Edad</th>
-        <th>Grupo Sanguineo</th>
-        <th>Telefono de Contacto</th>
+        <th> <b>Documento de Identidad </b></th>
+        <th><b>Nombre</b></th>
+        <th><b>Unidad Organizativa</b></th>
+        <th><b>Cargo</b></th>
+        <th><b>Gènero</b></th>
+        <th><b>EPS</b></th>
+        <th><b>Edad</b></th>
+        <th><b>Grupo Sanguìneo</b></th>
+        <th><b>Telèfono de Contacto</b></th>
       </tr>
       </thead>
       <tbody>
@@ -73,12 +73,12 @@
               <%= form.label :new_temperature, 'Temperatura nueva registrada',{:style => "font-size: 21px"}%>
               <%= form.text_field  :new_temperature, {:class => "form-control", :placeholder =>"Ingrese nueva temperatura ºC "} %>
             </div>
-            <label class="controle-exit">Presenta los siguientes sintomas</label>
+            <label class="controle-exit">Presenta los siguientes sìntomas</label>
             <table id="tablaEmployees" class="table table-bordered" width="90%">
               <tr>
                 <th style="width: 21%; height: 15%">
                   <div class="form-group">
-                    <label class="controle-exit"> Dolor de garganta</label>
+                    <label class="controle-exit"> Dolor de Garganta</label>
 
                     <div class="table-label-exit">
                    <div>
@@ -94,7 +94,7 @@
                 </th>
                 <th style="width: 21%; height: 15%">
                   <div class="form-group">
-                    <label class="controle-exit">Congestiòn nasal</label>
+                    <label class="controle-exit">Congestiòn Nasal</label>
 
                     <div class="table-label-exit">
                       <div>
@@ -126,7 +126,7 @@
                 </th>
                 <th style="width: 21%; height: 15%">
                   <div class="form-group">
-                    <label class="controle-exit">Dificulta para respirar</label>
+                    <label class="controle-exit">Dificulta para Respirar</label>
 
                     <div class="table-label-exit">
                       <div>
@@ -160,7 +160,7 @@
                 </th>
                 <th style="width: 21%; height: 15%">
                   <div class="form-group">
-                    <label class="controle-exit">Escalofrios</label>
+                    <label class="controle-exit">Escalofrìos</label>
 
                     <div class="table-label-exit">
                       <div>
@@ -176,7 +176,7 @@
                 </th>
                 <th style="width: 21%; height: 15%">
                   <div class="form-group">
-                    <label class="controle-exit">Dolor de musculo</label>
+                    <label class="controle-exit">Dolor de Mùsculos</label>
 
                     <div class="table-label-exit">
                       <div>
@@ -192,7 +192,7 @@
                 </th>
                 <th style="width: 21%; height: 15%">
                   <div class="form-group">
-                    <label class="controle-exit">Otro sintoma respiratorio</label>
+                    <label class="controle-exit">Otro Sìntoma Respiratorio</label>
 
                     <div class="table-label-exit">
                       <div>
@@ -208,7 +208,7 @@
                 </th>
               </tr>
             </table>
-            <label class="controle-exit"> Describa el sintoma</label>
+            <label class="controle-exit"> Describa el Sìntoma</label>
             <div class="form-group">
               <%= form.text_area :respiratory, {:class => "form-control", :rows => "3" } %>
             </div>

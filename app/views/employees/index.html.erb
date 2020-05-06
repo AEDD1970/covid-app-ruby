@@ -7,11 +7,11 @@
   <h1 class="fas fa-user-friends"></h1>
 </h5>
 </div>
-<p style="font-size: 20px">Busqueda de Empleados</p>
+<p style="font-size: 20px">Bùsqueda de Empleados</p>
 <%= form_tag(search_employees_path, :method => "get",
              class: 'navbar-form navbar-left') do %>
   <div class="input-group", id="searchEmployee">
-    <%= search_field_tag :search, params[:search], placeholder: "Buscar Empleado Por el Numero de Documento", class: "form-control col-md-4" %>
+    <%= search_field_tag :search, params[:search], placeholder: "Buscar Empleado Por el Nùmero de Documento", class: "form-control col-md-4" %>
     <div class="input-group-btn">
       <%= button_tag "Buscar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
     </div>
@@ -34,16 +34,16 @@
             <th>Nombre</th>
             <th>Unidad Organizativa</th>
             <th>Cargo</th>
-            <th>Genero</th>
+            <th>Gènero</th>
             <th>EPS</th>
             <th>Edad</th>
-            <th>Grupo Sanguineo</th>
-            <th>Telefono de Contacto</th>
-            <th>Telefono en Caso de Emergencia</th>
+            <th>Grupo Sanguìneo</th>
+            <th>Telèfono de Contacto</th>
+            <th>Telèfono en Caso de Emergencia</th>
             <th>Peso</th>
             <th>Talla</th>
             <th>IMC</th>
-            <th>Interpretacion</th>
+            <th>Interpretaciòn</th>
           </tr>
         </thead>
           <tbody>

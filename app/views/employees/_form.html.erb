@@ -1,6 +1,6 @@
 <%= form_for @employee, remote: true do |f| %>
   <div class="form-group">
-    <h4 class="control-label">Datos de los empleados: </h4>
+    <h4 class="control-label">Datos de los Empleados: </h4>
   </div>
 
   <div class="item form-group<%= @employee.errors[:document_number].any? ? ' has-error has-feedback' : '' %>">
