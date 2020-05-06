@@ -20,6 +20,9 @@ class CreateExitSurveys < ActiveRecord::Migration[5.2]
       t.string :gloves_caucho
       t.string :other_element
       t.string :not_other_element
+      t.string :camp_a
+      t.string :camp_b
+      t.string :camp_c
 
       t.timestamps
     end

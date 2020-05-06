@@ -65,6 +65,9 @@ ActiveRecord::Schema.define(version: 2020_05_01_010012) do
     t.string "gloves_caucho"
     t.string "other_element"
     t.string "not_other_element"
+    t.string "camp_a"
+    t.string "camp_b"
+    t.string "camp_c"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -95,6 +98,9 @@ ActiveRecord::Schema.define(version: 2020_05_01_010012) do
     t.string "gloves_caucho_init"
     t.string "other_element_init"
     t.string "not_other_element_init"
+    t.string "camp_a_init"
+    t.string "camp_b_init"
+    t.string "camp_c_init"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

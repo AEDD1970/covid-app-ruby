@@ -293,14 +293,58 @@
               </tr>
             </table>
 
-            <label class="controle-exit"> Otro elemento</label>
+
             <div class="form-group">
+              <label > Otro elemento</label>
+              <%= form.check_box :other_element_init,{},"si",{:class => "form-control"} %>
               <%= form.text_field  :other_element_init, {:class => "form-control", :placeholder =>"Describa cual? "} %>
             </div>
-            <label class="controle-exit"> No aplica</label>
+            <label > No aplica</label>
+            <%= form.check_box :not_other_element_init,{},"si",{:class => "form-control"} %>
             <div class="form-group">
               <%= form.text_field  :not_other_element_init, {:class => "form-control", :placeholder =>"Por qué? "} %>
             </div>
+
+            <label class="controle-exit">Verifique si al finalizar la jornada realizó las siguientes acciones:</label>
+            <table id="tablaEmployees" class="table table-bordered" width="90%">
+              <tr>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit"> Lavado o desinfección de manos</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.check_box :camp_a_init,{},"si",{:class => "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit">Desechar los elementos de bioseguridad usados</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.check_box :camp_b_init,{},"si",{:class => "form-control"} %>
+                      </div>
+
+                    </div>
+                  </div>
+                </th>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit">Desinfección de los elementos de protección personal permanentes</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.check_box :camp_c_init,{},"si",{:class => "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+
+              </tr>
+            </table>
 
             <div class="btn btn-primary">
               <%= form.submit "Guardar", :class => "button" %>

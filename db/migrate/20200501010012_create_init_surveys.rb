@@ -20,6 +20,9 @@ class CreateInitSurveys < ActiveRecord::Migration[5.2]
       t.string :gloves_caucho_init
       t.string :other_element_init
       t.string :not_other_element_init
+      t.string :camp_a_init
+      t.string :camp_b_init
+      t.string :camp_c_init
 
       t.timestamps
     end
