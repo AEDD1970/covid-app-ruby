@@ -7,11 +7,11 @@
   <h1 class="fas fa-user-friends"></h1>
 </h5>
 </div>
-<p style="font-size: 20px">Bùsqueda de Empleados</p>
+<p style="font-size: 20px">Búsqueda de empleados</p>
 <%= form_tag(search_employees_path, :method => "get",
              class: 'navbar-form navbar-left') do %>
   <div class="input-group", id="searchEmployee">
-    <%= search_field_tag :search, params[:search], placeholder: "Buscar Empleado Por el Nùmero de Documento", class: "form-control col-md-4" %>
+    <%= search_field_tag :search, params[:search], placeholder: "Ingrese número de documento", class: "form-control col-md-4" %>
     <div class="input-group-btn">
       <%= button_tag "Buscar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
     </div>
@@ -37,9 +37,9 @@
             <th>Género</th>
             <th>EPS</th>
             <th>Edad</th>
-            <th>Grupo Sanguìneo</th>
+            <th>Grupo Sanguíneo</th>
             <th>Teléfono de Contacto</th>
-            <th>Telèfono en Caso de Emergencia</th>
+            <th>Teléfono en Caso de Emergencia</th>
             <th>Peso</th>
             <th>Talla</th>
             <th>IMC</th>
@@ -65,7 +65,7 @@
                 <td><%= emp.interpretation.description %></td>
                   <td>
                     <%= link_to "Editar", edit_employee_path(emp), html_options = {class: "btn btn-info btn-xs", remote: true}%>
-                    <%= link_to "Borrar", emp, remote: true, method: :delete, data: { confirm: "¿Estas seguro que quieres borrar el empleado: #{emp.name}?"}, class: "btn btn-danger btn-xs" %>
+                    <%= link_to "Borrar", emp, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el empleado: #{emp.name}?"}, class: "btn btn-danger btn-xs" %>
                   </td>
               </tr>
             <% end %>
