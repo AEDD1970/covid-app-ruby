@@ -12,7 +12,7 @@
   <div class="form-group mx-sm-3 mb-2" >
     <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese número de documento"} %>
   </div>
-    <%= inf.submit "Buscar", :class => "button", :onclick => "alert('Encuesta de entrada guardada)"%>
+    <%= inf.submit "Buscar", :class => 'btn btn-info glyphicon glyphicon-search', :onclick => "alert('Encuesta de entrada guardada)"%>
   <% end %>
 </form>
 
@@ -33,6 +33,7 @@
         <th><b>Edad</b></th>
         <th><b>Grupo Sanguíneo</b></th>
         <th><b>Teléfono de Contacto</b></th>
+        <th><b>Teléfono en Caso de Emergencia</b></th>
       </tr>
       </thead>
       <tbody>
@@ -48,6 +49,7 @@
           <td><%= emp.age %></td>
           <td><%= emp.blood_type %></td>
           <td><%= emp.phone %></td>
+          <td><%= emp.emergency_number %></td>
         </tr>
       <% end %>
         <%else %>
@@ -250,12 +252,12 @@
 
 
             <div class="form-group">
-              <label > Otro elemento</label>
+              <label style="font-size: 21px"> Otro elemento</label>
               <%= form.check_box :other_element_init,{},"si",{:class => "form-control"} %>
-              <%= form.text_field  :other_element_init, {:class => "form-control", :placeholder =>"Describa cual? "} %>
+              <%= form.text_field  :other_element_init, {:class => "form-control", :placeholder =>"¿Cuál? "} %>
 
             </div>
-            <label > No aplica</label>
+            <label style="font-size: 21px"> No aplica</label>
             <%= form.check_box :not_other_element_init,{},"si",{:class => "form-control"} %>
             <div class="form-group">
               <%= form.text_field  :not_other_element_init, {:class => "form-control", :placeholder =>"¿Por qué?"} %>
@@ -301,10 +303,7 @@
 
               </tr>
             </table>
-
-            <div class="btn btn-primary">
-              <%= form.submit "Guardar", :class => "button" %>
-            </div>
+              <%= form.submit "Guardar", :class => 'btn btn-info glyphicon glyphicon-search' %>
           <% end %>
         </div>
         <div class="form-check" style="padding: 0!important;">
