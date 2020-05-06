@@ -76,6 +76,6 @@ class ExitSurveysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exit_survey_params
-      params.require(:exit_survey).permit(:Sore_throat, :Nasal_congestion, :Cough, :Difficulty_breathing, :Fatigue, :Shaking_chills, :Muscle_pain, :Another, :respiratory, :temperature, :new_temperature)
+      params.require(:exit_survey).permit(:Sore_throat, :Nasal_congestion, :Cough, :Difficulty_breathing, :Fatigue, :Shaking_chills, :Muscle_pain, :Another, :respiratory, :temperature, :new_temperature, :employee_id, :disposable_covers, :respirador, :gloves_latex, :gloves_nitrilo, :gloves_caucho, :other_element, :not_other_element )
     end
 end

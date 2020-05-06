@@ -79,6 +79,6 @@ class InitSurveysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def init_survey_params
-      params.require(:init_survey).permit(:sore_throat_init, :nasal_congestion_init, :cough_init, :difficulty_breathing_init, :fatigue_init, :shaking_chills_init, :muscle_pain_init, :another_init, :respiratory_init, :temperature_init, :new_temperature_init, :employee_id)
+      params.require(:init_survey).permit(:sore_throat_init, :nasal_congestion_init, :cough_init, :difficulty_breathing_init, :fatigue_init, :shaking_chills_init, :muscle_pain_init, :another_init, :respiratory_init, :temperature_init, :new_temperature_init, :employee_id, :disposable_covers_init, :respirador_init, :gloves_latex_init, :gloves_nitrilo_init, :gloves_caucho_init, :other_element_init,  :not_other_element_init )
     end
 end

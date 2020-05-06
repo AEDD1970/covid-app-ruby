@@ -28,10 +28,10 @@
         <th><b>Nombre</b></th>
         <th><b>Unidad Organizativa</b></th>
         <th><b>Cargo</b></th>
-        <th><b>Gènero</b></th>
+        <th><b>Género</b></th>
         <th><b>EPS</b></th>
         <th><b>Edad</b></th>
-        <th><b>Grupo Sanguìneo</b></th>
+        <th><b>Grupo Sanguíneo</b></th>
         <th><b>Telèfono de Contacto</b></th>
       </tr>
       </thead>
@@ -81,7 +81,7 @@
                 flex-direction: column;
                 justify-content: center;
                 font-size: 21px;
-                display: flex; ">Presenta los Siguientes Sìntomas</label>
+                display: flex; ">Presenta los Siguientes Síntomas</label>
             <table id="tablaEmployees" class="table table-bordered" width="90%">
               <tr>
                 <th style="width: 21%;">
@@ -102,7 +102,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Congestiòn Nasal</label>
+                    <label class="controle-init">Congestión Nasal</label>
 
                     <div class="table-label-int">
                       <div>
@@ -134,7 +134,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Dificulta para Respirar</label>
+                    <label class="controle-init">Dificultad para Respirar</label>
 
                     <div class="table-label-int">
                       <div>
@@ -168,7 +168,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Escalofrìos</label>
+                    <label class="controle-init">Escalofríos</label>
 
                     <div class="table-label-int">
                       <div>
@@ -184,7 +184,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Dolor de Mùsculos</label>
+                    <label class="controle-init">Dolor de Músculos</label>
 
                     <div class="table-label-int">
                       <div>
@@ -200,7 +200,7 @@
                 </th>
                 <th style="width: 21%;">
                   <div class="form-group">
-                    <label class="controle-init">Otro Sìntoma Respiratorio </label>
+                    <label class="controle-init">Otro Síntoma Respiratorio </label>
 
                     <div class="table-label-int">
                       <div>
@@ -221,10 +221,87 @@
                 flex-direction: column;
                 justify-content: center;
                 font-size: 21px;
-                display: flex;"> Describa el Sìntoma</label>
+                display: flex;"> Describa el Síntoma</label>
             <div class="form-group">
-              <%= form.text_area :respiratory, {:class => "form-control", :rows => "3" } %>
+              <%= form.text_area :respiratory_init, {:class => "form-control", :rows => "3" } %>
             </div>
+
+            <label class="controle-exit">Se hace entrega de los siguientes elementos de bioseguridad/protección:</label>
+            <table id="tablaEmployees" class="table table-bordered" width="90%">
+              <tr>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit"> Tapabocas desechable</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.label :disposable_covers_init, '-',{:class => "fas fa-check-circle"}%>
+                        <%= form.check_box :disposable_covers_init,{},"si",{:class => "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit">Respirador</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.label :respirador_init, '-',{:class => "fas fa-check-circle"}%>
+                        <%= form.check_box :respirador_init,{},"si",{:class => "form-control"} %>
+                      </div>
+
+                    </div>
+                  </div>
+                </th>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit">Guantes de látex</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.label :gloves_latex_init, '-' ,{:class => "fas fa-check-circle"}%>
+                        <%= form.check_box :gloves_latex_init,{},"si",{:class => "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit">Guantes de nitrilo</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.label :gloves_nitrilo_init, '-',{:class => "fas fa-check-circle"} %>
+                        <%= form.check_box :gloves_nitrilo_init,{},"si",{:class => "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th style="width: 21%; height: 15%">
+                  <div class="form-group">
+                    <label class="controle-exit">Guantes de caucho</label>
+
+                    <div class="table-label-exit">
+                      <div>
+                        <%= form.label :gloves_caucho_init, '-',{:class => "fas fa-check-circle"} %>
+                        <%= form.check_box :gloves_caucho_init,{},"si",{:class => "form-control"} %>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </table>
+
+            <label class="controle-exit"> Otro elemento</label>
+            <div class="form-group">
+              <%= form.text_field  :other_element_init, {:class => "form-control", :placeholder =>"Describa cual? "} %>
+            </div>
+            <label class="controle-exit"> No aplica</label>
+            <div class="form-group">
+              <%= form.text_field  :not_other_element_init, {:class => "form-control", :placeholder =>"Por qué? "} %>
+            </div>
+
             <div class="btn btn-primary">
               <%= form.submit "Guardar", :class => "button" %>
             </div>

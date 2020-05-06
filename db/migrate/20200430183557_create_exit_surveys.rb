@@ -13,6 +13,13 @@ class CreateExitSurveys < ActiveRecord::Migration[5.2]
       t.string :temperature
       t.string :new_temperature
       t.integer :employee_id
+      t.string :disposable_covers
+      t.string :respirador
+      t.string :gloves_latex
+      t.string :gloves_nitrilo
+      t.string :gloves_caucho
+      t.string :other_element
+      t.string :not_other_element
 
       t.timestamps
     end

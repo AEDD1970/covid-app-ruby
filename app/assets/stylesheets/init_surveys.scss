@@ -7,6 +7,7 @@
   align-content: center;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   font-size: 21px;
   display: flex;
 }
@@ -26,15 +27,8 @@ input[type='checkbox'] {
   width: 15px;
   height: 15px;
 }
-.boder-table-t{
-  border: 1px solid #101010 !important;
-}
-.boder-table-t tr{
-  border: 1px solid #101010 !important;
-}
-.boder-table-t td{
-  border: 1px solid #101010 !important;
-}
-.boder-table-t th{
-  border: 1px solid #101010 !important;
+.boder-table-t th {
+  vertical-align: middle !important;
+  padding: 0 0.5rem !important;
+  height: 80px;
 }

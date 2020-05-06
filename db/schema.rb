@@ -58,6 +58,13 @@ ActiveRecord::Schema.define(version: 2020_05_01_010012) do
     t.string "temperature"
     t.string "new_temperature"
     t.integer "employee_id"
+    t.string "disposable_covers"
+    t.string "respirador"
+    t.string "gloves_latex"
+    t.string "gloves_nitrilo"
+    t.string "gloves_caucho"
+    t.string "other_element"
+    t.string "not_other_element"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,6 +88,13 @@ ActiveRecord::Schema.define(version: 2020_05_01_010012) do
     t.string "temperature_init"
     t.string "new_temperature_init"
     t.integer "employee_id"
+    t.string "disposable_covers_init"
+    t.string "respirador_init"
+    t.string "gloves_latex_init"
+    t.string "gloves_nitrilo_init"
+    t.string "gloves_caucho_init"
+    t.string "other_element_init"
+    t.string "not_other_element_init"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
