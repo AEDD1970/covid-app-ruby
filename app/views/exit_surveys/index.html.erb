@@ -82,13 +82,8 @@
 
                     <div class="table-label-exit">
                    <div>
-                     <%= form.label :Sore_throat, 'Si',{:style => "font-size: 21px"}%>
                      <%= form.check_box :Sore_throat,{},"si",{:class => "form-control"} %>
                    </div>
-                      <div>
-                        <%= form.label :Sore_throat, 'No',{:style => "font-size: 21px"}%>
-                        <%= form.check_box :Sore_throat,{},"no",{:class => "form-control"} %>
-                      </div>
                     </div>
                   </div>
                 </th>
@@ -98,12 +93,7 @@
 
                     <div class="table-label-exit">
                       <div>
-                      <%= form.label :Nasal_congestion, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :Nasal_congestion,{},"si",{:class => "form-control"} %>
-                      </div>
-                      <div>
-                      <%= form.label :Nasal_congestion, 'No',{:style => "font-size: 21px"}%>
-                      <%= form.check_box :Nasal_congestion,{},"no",{:class => "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -114,12 +104,7 @@
 
                     <div class="table-label-exit">
                       <div>
-                      <%= form.label :Cough, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :Cough,{},"si",{:class => "form-control"} %>
-                      </div>
-                      <div>
-                      <%= form.label :Cough,'No',{:style => "font-size: 21px"}%>
-                      <%= form.check_box :Cough,{},"no",{:class => "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -130,12 +115,7 @@
 
                     <div class="table-label-exit">
                       <div>
-                      <%= form.label :Difficulty_breathing, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :Difficulty_breathing,{},"si",{:class => "form-control"} %>
-                      </div>
-                      <div>
-                      <%= form.label :Difficulty_breathing,'No',{:style => "font-size: 21px"}%>
-                      <%= form.check_box :Difficulty_breathing,{},"no",{:class => "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -148,12 +128,7 @@
 
                     <div class="table-label-exit">
                       <div>
-                      <%= form.label :Fatigue, 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :Fatigue,{},"si",{:class => "form-control"} %>
-                      </div>
-                      <div>
-                      <%= form.label :Fatigue,'No',{:style => "font-size: 21px"}%>
-                      <%= form.check_box :Fatigue,{},"no",{:class => "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -164,12 +139,7 @@
 
                     <div class="table-label-exit">
                       <div>
-                      <%= form.label :Shaking_chills , 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :Shaking_chills, {},"si",{:class => "form-control"} %>
-                      </div>
-                      <div>
-                      <%= form.label :Shaking_chills,'No',{:style => "font-size: 21px"}%>
-                      <%= form.check_box :Shaking_chills ,{},"no",{:class => "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -180,12 +150,7 @@
 
                     <div class="table-label-exit">
                       <div>
-                      <%= form.label :Muscle_pain , 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :Muscle_pain, {},"si",{:class => "form-control"} %>
-                      </div>
-                      <div>
-                      <%= form.label :Muscle_pain,'No',{:style => "font-size: 21px"}%>
-                      <%= form.check_box :Muscle_pain,{},"no",{:class => "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -196,12 +161,7 @@
 
                     <div class="table-label-exit">
                       <div>
-                      <%= form.label :Another , 'Si',{:style => "font-size: 21px"}%>
                       <%= form.check_box :Another, {},"si",{:class => "form-control"} %>
-                      </div>
-                      <div>
-                      <%= form.label :Another,'No',{:style => "font-size: 21px"}%>
-                      <%= form.check_box :Another,{},"no",{:class => "form-control"} %>
                       </div>
                     </div>
                   </div>
@@ -273,16 +233,10 @@
               </th>
             </tr>
             </table>
-
-
             <div class="form-group">
-<<<<<<< HEAD
               <label > Otro elemento</label>
               <%= form.check_box :other_element,{},"si",{:class => "form-control"} %>
               <%= form.text_field  :other_element, {:class => "form-control", :placeholder =>"Describa cual? "} %>
-=======
-              <%= form.text_field  :other_element, {:class => "form-control", :placeholder =>"¿Cuál? "} %>
->>>>>>> 52c77f74d7e501659fd0237132c6d676687fcd88
             </div>
             <label > No aplica</label>
             <%= form.check_box :not_other_element,{},"si",{:class => "form-control"} %>
