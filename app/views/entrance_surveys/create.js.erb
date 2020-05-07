@@ -1,0 +1,4 @@
+$('#modalEntranceSurveys').modal('toggle');
+$('#tablaEntranceSurveys').append(
+    '<tr id="entrance_survey_<%= @entrance_survey.id %>"><td><%= @entrance_survey.employee.document_number %></td><td><%= @entrance_survey.employee.name %></td><td><%= @entrance_survey.recorded_temperature %></td><td><%= @entrance_survey.new_temperature_recorded %></td><td><%= @entrance_survey.creation_date_and_time.strftime("%d-%m-%Y %I:%M %p") %></td><td><%= link_to 'editar', edit_entrance_survey_path(@entrance_survey), html_options = {class: "btn btn-info btn-xs", remote: true} %><%= link_to "Borrar", @entrance_survey, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{@entrance_survey.employee.name}?"}, class: "btn btn-danger btn-xs" %></td></tr>'
+)

@@ -53,7 +53,7 @@ class EmployeesController < ApplicationController
         format.json { head :no_content }
         format.js
       else
-        format.json { render json: @employee.errors.full_messages, status: :unprocessable_enty }
+        format.json { render json: @employee.errors.full_messages, status: :unprocessable_entity }
         format.js
       end
     end

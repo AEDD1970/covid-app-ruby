@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recorded_temperature: MyString
+  new_temperature_recorded: MyString
+  sore_throat: false
+  nasal_congestion: false
+  cough: false
+  difficulty_breathing: false
+  fatigue: false
+  shaking_chills: false
+  muscle_pain: false
+  other_respiratory_symptom: false
+  which_respiratory_symptom: MyString
+  disposable_fase_mask: false
+  respirator: false
+  latex_gloves: false
+  nitrile_gloves: false
+  rubber_gloves: false
+  another_item: false
+  which_other_element: MyString
+  does_not_apply_protection: false
+  does_not_apply_because: MyString
+  handwashing: false
+  discard_used_items: false
+  elemtos_disinfection: false
+
+two:
+  recorded_temperature: MyString
+  new_temperature_recorded: MyString
+  sore_throat: false
+  nasal_congestion: false
+  cough: false
+  difficulty_breathing: false
+  fatigue: false
+  shaking_chills: false
+  muscle_pain: false
+  other_respiratory_symptom: false
+  which_respiratory_symptom: MyString
+  disposable_fase_mask: false
+  respirator: false
+  latex_gloves: false
+  nitrile_gloves: false
+  rubber_gloves: false
+  another_item: false
+  which_other_element: MyString
+  does_not_apply_protection: false
+  does_not_apply_because: MyString
+  handwashing: false
+  discard_used_items: false
+  elemtos_disinfection: false

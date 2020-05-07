@@ -1,0 +1,49 @@
+<div style="align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex; margin-top: 5%"><h5
+  class="h3 mb-2 text-gray-800 ">Encuesta de entrada
+  <h1 class="fas fa-poll"></h1>
+</h5>
+</div>
+<div style="margin-top: 5%">
+  <%= link_to new_entrance_survey_path, {remote: true, class: "btn btn-info", id: "anadir-entrance_survey-btn"} do %>
+    <span>Nueva encuesta</span>
+  <% end %>
+</div>
+<br>
+<div class="card shadow mb-4" >
+  <div class="card-body">
+    <div class="table-responsive">
+      <table id="tablaEntranceSurveys" class="table table-bordered table-responsive boder-table-t" width="90%">
+        <thead>
+        <tr>
+          <th>Documento de Identidad</th>
+          <th>Nombre</th>
+          <th>Tempera Registrada</th>
+          <th>Temperatura Nueva Registrada</th>
+          <th>Fecha y hora de creación</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @entrance_surveys.each do |entrance| %>
+          <tr id="entrance_survey_<%= entrance.id %>">
+            <td><%= entrance.employee.document_number %></td>
+            <td><%= entrance.employee.name %></td>
+            <td><%= entrance.recorded_temperature %></td>
+            <td><%= entrance.new_temperature_recorded %></td>
+            <td><%= entrance.creation_date_and_time.strftime("%d-%m-%Y %I:%M %p") %></td>
+            <td>
+              <%= link_to "Editar", edit_entrance_survey_path(entrance), html_options = {class: "btn btn-info btn-xs", remote: true}%>
+              <%= link_to "Borrar", entrance, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{entrance.employee.name}?"}, class: "btn btn-danger btn-xs" %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%=render 'modal_entrance_surveys' %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_010012) do
+ActiveRecord::Schema.define(version: 2020_05_07_054948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,36 @@ ActiveRecord::Schema.define(version: 2020_05_01_010012) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "entrance_surveys", force: :cascade do |t|
+    t.string "recorded_temperature"
+    t.string "new_temperature_recorded"
+    t.boolean "sore_throat"
+    t.boolean "nasal_congestion"
+    t.boolean "cough"
+    t.boolean "difficulty_breathing"
+    t.boolean "fatigue"
+    t.boolean "shaking_chills"
+    t.boolean "muscle_pain"
+    t.boolean "other_respiratory_symptom"
+    t.string "which_respiratory_symptom"
+    t.boolean "disposable_face_mask"
+    t.boolean "respirator"
+    t.boolean "latex_gloves"
+    t.boolean "nitrile_gloves"
+    t.boolean "rubber_gloves"
+    t.boolean "another_item"
+    t.string "which_other_element"
+    t.boolean "does_not_apply_protection"
+    t.string "does_not_apply_because"
+    t.boolean "hand_disinfection"
+    t.boolean "discard_used_items"
+    t.boolean "disinfection_element"
+    t.integer "employee_id"
+    t.datetime "creation_date_and_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "exit_surveys", force: :cascade do |t|
     t.string "Sore_throat"
     t.string "Nasal_congestion"
@@ -58,16 +88,6 @@ ActiveRecord::Schema.define(version: 2020_05_01_010012) do
     t.string "temperature"
     t.string "new_temperature"
     t.integer "employee_id"
-    t.string "disposable_covers"
-    t.string "respirador"
-    t.string "gloves_latex"
-    t.string "gloves_nitrilo"
-    t.string "gloves_caucho"
-    t.string "other_element"
-    t.string "not_other_element"
-    t.string "camp_a"
-    t.string "camp_b"
-    t.string "camp_c"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,16 +111,6 @@ ActiveRecord::Schema.define(version: 2020_05_01_010012) do
     t.string "temperature_init"
     t.string "new_temperature_init"
     t.integer "employee_id"
-    t.string "disposable_covers_init"
-    t.string "respirador_init"
-    t.string "gloves_latex_init"
-    t.string "gloves_nitrilo_init"
-    t.string "gloves_caucho_init"
-    t.string "other_element_init"
-    t.string "not_other_element_init"
-    t.string "camp_a_init"
-    t.string "camp_b_init"
-    t.string "camp_c_init"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

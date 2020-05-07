@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     end
 end
   resources :surveys_history
+  resources :entrance_surveys
 
   # resources :employees, only: [:index, :create, :update, :destroy, :edit] do
   #   collection do

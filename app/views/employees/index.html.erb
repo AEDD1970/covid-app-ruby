@@ -8,10 +8,9 @@
 </h5>
 </div>
 <p style="font-size: 20px">Búsqueda de empleados</p>
-<%= form_tag(search_employees_path, :method => "get",
-             class: 'navbar-form navbar-left') do %>
+<%= form_tag(search_employees_path, :method => "get", class: 'navbar-form navbar-left') do %>
   <div class="input-group", id="searchEmployee">
-    <%= search_field_tag :search, params[:search], placeholder: "Ingrese número de documento", class: "form-control col-md-4" %>
+    <%= search_field_tag :search, params[:search], placeholder: "Ingrese número de documento", class: "form-control col-md-4"%>
     <div class="input-group-btn">
       <%= button_tag "Buscar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
     </div>
@@ -48,7 +47,7 @@
         </thead>
           <tbody>
             <% @employees.each do |emp| %>
-              <tr id="employee_<% emp.id %>">
+              <tr id="employee_<%= emp.id %>">
                 <td><%= emp.document_number %></td>
                 <td><%= emp.name %></td>
                 <td><%= emp.organizational_unit %></td>
