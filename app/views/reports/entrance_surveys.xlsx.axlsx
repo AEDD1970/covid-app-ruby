@@ -1,11 +1,11 @@
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Reporte") do |sheet|
-  sheet.add_row ['Tempera Registrada', 'Temperatura Nueva Registrada', 'Dolor de Garganta', 'Congestión nasal', 'Tos', 'Dificultad para respirar', 'Fatiga',
+  sheet.add_row ['Documento de Identidad', 'Nombre','Tempera Registrada', 'Temperatura Nueva Registrada', 'Dolor de Garganta', 'Congestión nasal', 'Tos', 'Dificultad para respirar', 'Fatiga',
   'Escalofríos', 'Dolor de músculos', 'Otro síntoma respiratorio', 'Describa el Síntoma', 'Tapabocas Desechable', 'Respirador', 'Guantes de Látex',
   'Guantes de Nitrilo', 'Guantes de Caucho', 'Otro Elemento', '¿Cual?', 'No Aplica', '¿Por Que?', 'Lavado o Desinfección de Manos', 'Desechar los Elementos de Bioseguridad Usados',
   'Desinfección de los Elementos de Protección Personal Permanentes']
   @entrance_survey.each do |f|
-    sheet.add_row [f.recorded_temperature, f.new_temperature_recorded, f.sore_throat, f.nasal_congestion, f.cough, f.difficulty_breathing, f.fatigue, f.shaking_chills,
+    sheet.add_row [f.employee.document_number, f.employee.name, f.recorded_temperature, f.new_temperature_recorded, f.sore_throat, f.nasal_congestion, f.cough, f.difficulty_breathing, f.fatigue, f.shaking_chills,
     f.muscle_pain, f.other_respiratory_symptom, f.which_respiratory_symptom, f.disposable_face_mask, f.respirator, f.latex_gloves, f.nitrile_gloves, f.rubber_gloves,
     f.another_item, f.which_other_element, f.does_not_apply_protection, f.does_not_apply_because, f.hand_disinfection, f.discard_used_items, f.disinfection_element]
   end
