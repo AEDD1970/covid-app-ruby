@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_054948) do
+ActiveRecord::Schema.define(version: 2020_05_07_145212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -88,6 +88,16 @@ ActiveRecord::Schema.define(version: 2020_05_07_054948) do
     t.string "temperature"
     t.string "new_temperature"
     t.integer "employee_id"
+    t.string "disposable_covers"
+    t.string "respirador"
+    t.string "gloves_latex"
+    t.string "gloves_nitrilo"
+    t.string "gloves_caucho"
+    t.string "other_element"
+    t.string "not_other_element"
+    t.string "camp_a"
+    t.string "camp_b"
+    t.string "camp_c"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -98,19 +108,10 @@ ActiveRecord::Schema.define(version: 2020_05_07_054948) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "init_surveys", force: :cascade do |t|
-    t.string "sore_throat_init"
-    t.string "nasal_congestion_init"
-    t.string "cough_init"
-    t.string "difficulty_breathing_init"
-    t.string "fatigue_init"
-    t.string "shaking_chills_init"
-    t.string "muscle_pain_init"
-    t.string "another_init"
-    t.string "respiratory_init"
-    t.string "temperature_init"
-    t.string "new_temperature_init"
-    t.integer "employee_id"
+  create_table "imcs", force: :cascade do |t|
+    t.integer "weight"
+    t.integer "height"
+    t.integer "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

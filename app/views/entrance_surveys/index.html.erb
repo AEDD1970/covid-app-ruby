@@ -7,13 +7,25 @@
   <h1 class="fas fa-poll"></h1>
 </h5>
 </div>
-<div style="margin-top: 5%">
+
+
+<p style="font-size: 20px">Búsqueda de empleados</p>
+<%= form_tag(search_entrance_surveys_path, :method => "get", class: 'navbar-form navbar-left') do %>
+  <div class="input-group", id="searchEmployee">
+    <%= search_field_tag :search, params[:search], placeholder: "Ingrese número de documento", class: "form-control col-md-4"%>
+    <div class="input-group-btn">
+      <%= button_tag "Buscar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
+    </div>
+  </div>
+<% end %>
+
+<div style="margin-top: 5%;  margin-left: 10%">
   <%= link_to new_entrance_survey_path, {remote: true, class: "btn btn-info", id: "anadir-entrance_survey-btn"} do %>
     <span>Nueva encuesta</span>
   <% end %>
 </div>
 <br>
-<div class="card shadow mb-4" >
+<div class="card shadow mb-4" style="width: 80%; margin-left: 10%" >
   <div class="card-body">
     <div class="table-responsive">
       <table id="tablaEntranceSurveys" class="table table-bordered table-responsive boder-table-t" width="90%">

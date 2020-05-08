@@ -3,50 +3,6 @@
     <h4 class="control-label">Datos de la encuesta:</h4>
   </div>
 
-<!--  <form class="form-inline" >-->
-    <%#= form_with do |inf| %>
-        <%#= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese número de documento"} %>
-      <%#= inf.submit "Buscar", :class => 'btn btn-info glyphicon glyphicon-search', :onclick => "alert('Encuesta de entrada guardada)"%>
-    <%# end %>
-<!--  </form>-->
-
-<!--      <table class="table table-bordered table-responsive boder-table-t"  >-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--          <th> <b>Documento de Identidad </b></th>-->
-<!--          <th><b>Nombre</b></th>-->
-<!--          <th><b>Unidad Organizativa</b></th>-->
-<!--          <th><b>Cargo</b></th>-->
-<!--          <th><b>Género</b></th>-->
-<!--          <th><b>EPS</b></th>-->
-<!--          <th><b>Edad</b></th>-->
-<!--          <th><b>Grupo Sanguíneo</b></th>-->
-<!--          <th><b>Teléfono de Contacto</b></th>-->
-<!--          <th><b>Teléfono en Caso de Emergencia</b></th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-        <%# if @employees %>
-          <%# @employees.each do |emp| %>
-<!--            <tr id="employee_<%# emp.id %>">-->
-<!--              <td><%#= emp.document_number %></td>-->
-<!--              <td><%#= emp.name %></td>-->
-<!--              <td><%#= emp.organizational_unit %></td>-->
-<!--              <td><%#= emp.position %></td>-->
-<!--              <td><%#= emp.gender.description %></td>-->
-<!--              <td><%#= emp.eps %></td>-->
-<!--              <td><%#= emp.age %></td>-->
-<!--              <td><%#= emp.blood_type %></td>-->
-<!--              <td><%#= emp.phone %></td>-->
-<!--              <td><%#= emp.emergency_number %></td>-->
-<!--            </tr>-->
-          <%# end %>
-        <%#else %>
-<!--          <h1></h1>-->
-        <%#end %>
-<!--        </tbody>-->
-<!--      </table>-->
-
 
 
         <div class="form-group">
@@ -286,6 +242,6 @@
 
 
   <div class="actions col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-    <%= f.submit @entrance_survey.new_record? ? "Crear encuesta" : "Actualizar encuesta", :class => "btn btn-success" %>
+    <%= f.submit @entrance_survey.new_record? ? "Crear encuesta" : "Actualizar encuesta", :class => "btn btn-success",:onclick => "alert('Registro de entrada guardado')" %>
   </div>
 <% end %>

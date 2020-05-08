@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  resources :init_surveys, only: [:index, :create, :show, :destroy, :update] do
-    collection do
-      post '/', action: :index
-    end
-  end
+
   resources :exit_surveys, only: [:index, :create, :show, :destroy, :update] do
   collection do
     post '/', action: :index
@@ -17,7 +13,11 @@ Rails.application.routes.draw do
     end
 end
   resources :surveys_history
-  resources :entrance_surveys
+  resources :entrance_surveys, only: [:index, :create, :update, :destroy, :edit, :new] do
+    collection do
+      get '/search' => 'entrance_surveys#index', :as => 'search'
+    end
+    end
 
   # resources :employees, only: [:index, :create, :update, :destroy, :edit] do
   #   collection do

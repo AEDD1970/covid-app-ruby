@@ -1,8 +1,15 @@
 class EntranceSurveysController < ApplicationController
   before_action :set_entrance_survey, only: [:edit, :update, :destroy]
 
+  $user = ""
   def index
-    @entrance_surveys = EntranceSurvey.all
+    if params[:search].blank?
+      @entrance_surveys  = EntranceSurvey.all
+    else
+      entrance_surveys= params[:search]
+      $user = Employee.find_by_document_number(entrance_surveys).id
+      @entrance_surveys = EntranceSurvey.where(employee_id: $user)
+    end
   end
 
   def new
@@ -12,7 +19,7 @@ class EntranceSurveysController < ApplicationController
   def create
     @entrance_survey = EntranceSurvey.new(entrance_survey_params)
     @entrance_survey.creation_date_and_time =  Time.now.strftime("%d-%m-%Y %I:%M %p")
-    @entrance_survey.employee_id = 1
+    @entrance_survey.employee_id = $user
     respond_to do |format|
         if @entrance_survey.save
           format.json { head :no_content }
