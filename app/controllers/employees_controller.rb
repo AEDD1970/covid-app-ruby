@@ -25,7 +25,12 @@ class EmployeesController < ApplicationController
   def parameter_validation_for_validation
     @employee.responsible = "ANDRES"
     @employee.responsible_position = "Resepcion"
-    @employee.weight += ' KG'
+    @employee.weight
+    @employee.imc =
+        height = @employee.size.to_f
+    weight = @employee.weight.to_i
+    weight / (height)**2
+
     @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
     respond_to do |format|
       if @employee.save

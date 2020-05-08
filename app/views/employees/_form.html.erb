@@ -126,15 +126,15 @@
     </div>
   </div>
 
-  <div class="item form-group<%= @employee.errors[:imc].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :imc, "IMC: " %>
-    <div class="input-group">
-      <%= f.text_field :imc, {:class => "form-control", :placeholder => "Ingrese IMC"} %>
-      <%if @employee.errors[:imc].any? %>
-        <p class="bg-danger"><%= @employee.errors[:imc].to_s[/\w([^"]*)/] %></p>
-      <% end %>
-    </div>
-  </div>
+<!--  <div class="item form-group<%#= @employee.errors[:imc].any? ? ' has-error has-feedback' : '' %>">-->
+    <%#= f.label :imc, "IMC: " %>
+<!--    <div class="input-group">-->
+      <%#= f.text_field :imc, {:class => "form-control", :placeholder => "Ingrese IMC"} %>
+      <%#if @employee.errors[:imc].any? %>
+<!--        <p class="bg-danger"><%#= @employee.errors[:imc].to_s[/\w([^"]*)/] %></p>-->
+      <%# end %>
+<!--    </div>-->
+<!--  </div>-->
 
   <div class="item form-group<%= @employee.errors[:interpretation_id].any? ? ' has-error has-feedback' : '' %>">
     <%= f.label :interpretation_id, "Interpretación: " %>
