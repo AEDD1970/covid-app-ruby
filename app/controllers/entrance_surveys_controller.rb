@@ -7,7 +7,7 @@ class EntranceSurveysController < ApplicationController
       @entrance_surveys  = EntranceSurvey.all
     else
       entrance_surveys= params[:search]
-      $user = Employee.find_by_document_number(entrance_surveys).id
+      $user = Employee.find_by_document_number(entrance_surveys)&.id
       @entrance_surveys = EntranceSurvey.where(employee_id: $user)
     end
   end
