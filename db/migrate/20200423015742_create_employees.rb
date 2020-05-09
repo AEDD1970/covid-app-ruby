@@ -14,8 +14,8 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
       t.string :blood_type
       t.integer :phone, :limit => 8
       t.integer :emergency_number, :limit => 8
-      t.string :weight
-      t.string :size
+      t.integer :weight
+      t.float :size
       t.float :imc
       t.string :interpretation_id
       t.string :date_and_time

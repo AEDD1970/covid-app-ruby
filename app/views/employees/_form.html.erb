@@ -136,15 +136,15 @@
 <!--    </div>-->
 <!--  </div>-->
 
-  <div class="item form-group<%= @employee.errors[:interpretation_id].any? ? ' has-error has-feedback' : '' %>">
-    <%= f.label :interpretation_id, "Interpretación: " %>
-    <div class="input-group">
-      <%= f.collection_select :interpretation_id, Interpretation.all, :id, :description, { :prompt => "Seleccionar" }, { :class => "form-control"  }%>
-      <%if @employee.errors[:interpretation_id].any? %>
-        <p class="bg-danger"><%= @employee.errors[:interpretation_id].to_s[/\w([^"]*)/] %></p>
-      <% end %>
-    </div>
-  </div>
+<!--  <div class="item form-group<%#= @employee.errors[:interpretation_id].any? ? ' has-error has-feedback' : '' %>">-->
+    <%#= f.label :interpretation_id, "Interpretación: " %>
+<!--    <div class="input-group">-->
+      <%#= f.collection_select :interpretation_id, Interpretation.all, :id, :description, { :prompt => "Seleccionar" }, { :class => "form-control"  }%>
+      <%#if @employee.errors[:interpretation_id].any? %>
+<!--        <p class="bg-danger"><%#= @employee.errors[:interpretation_id].to_s[/\w([^"]*)/] %></p>-->
+      <%# end %>
+<!--    </div>-->
+<!--  </div>-->
 
   <div class="actions col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
     <%= f.submit @employee.new_record? ? "Crear empleado" : "Actualizar empleado", :class => "btn btn-success" %>
