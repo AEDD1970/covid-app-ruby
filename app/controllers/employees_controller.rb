@@ -22,10 +22,24 @@ class EmployeesController < ApplicationController
     end
   end
 
+  def calculate_data
+    height = @employee.size
+    weight = @employee.weight
+    result = weight / (height)**2
+    result.ceil(2)
+  end
+
+  def calculate_portion
+
+  end
+
   def parameter_validation_for_validation
+    puts "#{@employee.pretty_inspect}--------<<<<<<<<<<"
     @employee.responsible = "ANDRES"
     @employee.responsible_position = "Resepcion"
-    @employee.weight += ' KG'
+    @employee.weight
+    @employee.imc = calculate_data
+    @employee.interpretation_id = calculate_portion
     @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
     respond_to do |format|
       if @employee.save

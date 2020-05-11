@@ -10,6 +10,11 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'axlsx_rails', '>= 0.5.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844' # MIT-License
+# gem 'axlsx_rails', '>= 0.5.1' # MIT-License
+
+gem 'rubyzip', '>= 1.2.1' # Ruby license
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,7 +44,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #generator: gem devise
 gem 'devise'
-
+gem 'zip-zip'
 #use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 

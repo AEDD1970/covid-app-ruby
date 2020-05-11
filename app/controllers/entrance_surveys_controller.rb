@@ -4,16 +4,22 @@ class EntranceSurveysController < ApplicationController
   $user = ""
   def index
     entrance_surveys= params[:search].to_i
-    byebug
     @entrance_surveys  = EntranceSurvey.all
     result =  Employee.find_by_document_number(entrance_surveys)
     if result && entrance_surveys == result.document_number
-      byebug
       $user = result.id
-      @entrance_surveys = EntranceSurvey.where(employee_id: $user)
-    else
-      @data
     end
+
+  end
+
+  def xls_report
+    @entrance_survey = EntranceSurvey.all
+    #La variable @personal contiene a la lista del personal de una empresa x.
+    #     render xml:  "hello, world!",
+    # xlsx: 'report',
+    #            template: 'reports/entrance_surveys.xlsx.axlsx'
+    render xlsx: "Reporte de empleo #{Time.now.strftime('%d%m%Y%H%M%S')} ", template: 'reports/entrance_surveys.xlsx.axlsx'
+
   end
 
   def new

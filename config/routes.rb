@@ -16,6 +16,7 @@ end
   resources :entrance_surveys, only: [:index, :create, :update, :destroy, :edit, :new] do
     collection do
       get '/search' => 'entrance_surveys#index', :as => 'search'
+      post 'reports/entrance_surveys.xls', to: 'entrance_surveys#xls_report'
     end
     end
 

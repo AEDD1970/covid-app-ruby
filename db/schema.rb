@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_145212) do
+ActiveRecord::Schema.define(version: 2020_05_07_054948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 2020_05_07_145212) do
     t.string "blood_type"
     t.bigint "phone"
     t.bigint "emergency_number"
-    t.string "weight"
-    t.string "size"
+    t.integer "weight"
+    t.float "size"
     t.float "imc"
     t.string "interpretation_id"
     t.string "date_and_time"
@@ -100,21 +100,15 @@ ActiveRecord::Schema.define(version: 2020_05_07_145212) do
     t.boolean "discard_used_items_exit"
     t.boolean "disinfection_element_exit"
     t.integer "employee_id"
+
     t.datetime "creation_date_and_time"
+
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "genders", force: :cascade do |t|
     t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "imcs", force: :cascade do |t|
-    t.integer "weight"
-    t.integer "height"
-    t.integer "result"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
