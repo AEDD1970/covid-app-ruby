@@ -39,19 +39,21 @@
         </tr>
         </thead>
         <tbody>
-        <% @entrance_surveys.each do |entrance| %>
-          <tr id="entrance_survey_<%= entrance.id %>">
-            <td><%= entrance.employee.document_number %></td>
-            <td><%= entrance.employee.name %></td>
-            <td><%= entrance.recorded_temperature %></td>
-            <td><%= entrance.new_temperature_recorded %></td>
-            <td><%= entrance.creation_date_and_time.strftime("%d-%m-%Y %I:%M %p") %></td>
-            <td>
-              <%= link_to "Editar", edit_entrance_survey_path(entrance), html_options = {class: "btn btn-info btn-xs", remote: true}%>
-              <%= link_to "Borrar", entrance, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{entrance.employee.name}?"}, class: "btn btn-danger btn-xs" %>
-            </td>
-          </tr>
-        <% end %>
+
+          <% @entrance_surveys.each do |entrance| %>
+            <tr id="entrance_survey_<%= entrance.id %>">
+              <td><%= entrance.employee.document_number %></td>
+              <td><%= entrance.employee.name %></td>
+              <td><%= entrance.recorded_temperature %></td>
+              <td><%= entrance.new_temperature_recorded %></td>
+              <td><%= entrance.creation_date_and_time.strftime("%d-%m-%Y %I:%M %p") %></td>
+              <td>
+                <%= link_to "Editar", edit_entrance_survey_path(entrance), html_options = {class: "btn btn-info btn-xs", remote: true}%>
+                <%= link_to "Borrar", entrance, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{entrance.employee.name}?"}, class: "btn btn-danger btn-xs" %>
+              </td>
+            </tr>
+          <% end %>
+
         </tbody>
       </table>
     </div>

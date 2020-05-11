@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
 
-  resources :exit_surveys, only: [:index, :create, :show, :destroy, :update] do
-  collection do
-    post '/', action: :index
-     end
+  resources :exit_surveys, only: [:index, :create, :update, :destroy, :edit, :new] do
+    collection do
+      get '/search' => 'exit_surveys#index', :as => 'search'
+    end
    end
   devise_for :users
   root to: 'home#index'
-  resources :employees , only: [:index, :create, :update, :destroy, :edit, :new] do
+  resources :employees, only: [:index, :create, :update, :destroy, :edit, :new] do
     collection do
       get '/search' => 'employees#index', :as => 'search'
     end
 end
-  resources :surveys_history
+
   resources :entrance_surveys, only: [:index, :create, :update, :destroy, :edit, :new] do
     collection do
       get '/search' => 'entrance_surveys#index', :as => 'search'

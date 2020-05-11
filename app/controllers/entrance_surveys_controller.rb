@@ -3,12 +3,16 @@ class EntranceSurveysController < ApplicationController
 
   $user = ""
   def index
-    if params[:search].blank?
-      @entrance_surveys  = EntranceSurvey.all
-    else
-      entrance_surveys= params[:search]
-      $user = Employee.find_by_document_number(entrance_surveys).id
+    entrance_surveys= params[:search].to_i
+    byebug
+    @entrance_surveys  = EntranceSurvey.all
+    result =  Employee.find_by_document_number(entrance_surveys)
+    if result && entrance_surveys == result.document_number
+      byebug
+      $user = result.id
       @entrance_surveys = EntranceSurvey.where(employee_id: $user)
+    else
+      @data
     end
   end
 

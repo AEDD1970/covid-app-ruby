@@ -7,291 +7,58 @@
   <h1 class="fas fa-poll-h"></h1>
 </h5>
 </div>
-<form class="form-inline" style="margin-left: 9%!important">
-  <%= form_with do |inf| %>
-    <div class="form-group mx-sm-3 mb-2" >
-      <%= inf.text_field  :document_number, {:class => "form-control", :placeholder =>"Ingrese número de documento"} %>
+
+
+<p style="font-size: 20px">Búsqueda de empleados</p>
+<%= form_tag(search_exit_surveys_path, :method => "get", class: 'navbar-form navbar-left') do %>
+  <div class="input-group", id="searchEmployee">
+    <%= search_field_tag :search, params[:search], placeholder: "Ingrese número de documento", class: "form-control col-md-4"%>
+    <div class="input-group-btn">
+      <%= button_tag "Buscar", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
     </div>
-    <%= inf.submit "Buscar", :class => 'btn btn-info glyphicon glyphicon-search', :onclick => "alert('Encuesta de entrada guardada)"%>
-  <% end %>
-</form>
-
-
-<!-- info de busqueda-->
-<div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
-  <div class="card-body">
-
-    <table id="tablaEmployees" class="table table-bordered table-responsive boder-table-t ">
-      <thead>
-      <tr>
-        <th> <b>Documento de Identidad </b></th>
-        <th><b>Nombre</b></th>
-        <th><b>Unidad Organizativa</b></th>
-        <th><b>Cargo</b></th>
-        <th><b>Género</b></th>
-        <th><b>EPS</b></th>
-        <th><b>Edad</b></th>
-        <th><b>Grupo Sanguíneo</b></th>
-        <th><b>Teléfono de Contacto</b></th>
-        <th><b>Teléfono en Caso de Emergencia</b></th>
-      </tr>
-      </thead>
-      <tbody>
-      <% if @employees %>
-        <% @employees.each do |emp| %>
-          <tr id="employee_<% emp.id %>">
-            <td><%= emp.document_number %></td>
-            <td><%= emp.name %></td>
-            <td><%= emp.organizational_unit %></td>
-            <td><%= emp.position %></td>
-            <td><%= emp.gender_id %></td>
-            <td><%= emp.eps %></td>
-            <td><%= emp.age %></td>
-            <td><%= emp.blood_type %></td>
-            <td><%= emp.phone %></td>
-            <td><%= emp.emergency_number %></td>
-          </tr>
-        <% end %>
-      <%else %>
-        <h1></h1>
-      <%end %>
-      </tbody>
-    </table>
   </div>
+<% end %>
+
+<div style="margin-top: 5%;  margin-left: 10%">
+  <%= link_to new_exit_survey_path, {remote: true, class: "btn btn-info", id: "anadir-exit_survey-btn"} do %>
+    <span>Nueva encuesta</span>
+  <% end %>
 </div>
-<div class="card shadow mb-4" style="width: 80%; margin-left: 10%">
+<br>
+<div class="card shadow mb-4" style="width: 80%; margin-left: 10%" >
   <div class="card-body">
     <div class="table-responsive">
-      <!-- formulario encuesta entrada-->
-      <form>
+      <table id="tablaExitSurveys" class="table table-bordered table-responsive boder-table-t" width="90%">
+        <thead>
+        <tr>
+          <th>Documento de Identidad</th>
+          <th>Nombre</th>
+          <th>Tempera Registrada</th>
+          <th>Temperatura Nueva Registrada</th>
+          <th>Fecha y hora de creación</th>
+        </tr>
+        </thead>
+        <tbody>
 
-        <div class="form-check" style="padding: 0!important;">
-          <%= form_with do |form| %>
-            <div class="form-group">
-              <%= form.label :temperature, 'Temperatura registrada',{:style => "font-size: 21px"}%>
-              <%= form.text_field  :temperature, {:class => "form-control", :placeholder =>"Ingrese temperatura en ºC "} %>
-            </div>
-            <div class="form-group">
-              <%= form.label :new_temperature, 'Temperatura nueva registrada',{:style => "font-size: 21px"}%>
-              <%= form.text_field  :new_temperature, {:class => "form-control", :placeholder =>"Ingrese nueva temperatura en ºC "} %>
-            </div>
-            <label class="controle-exit">Presenta los siguientes síntomas</label>
-            <table id="tablaEmployees" class="table table-bordered" width="90%">
-              <tr>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit"> Dolor de garganta</label>
+        <% @exit_surveys.each do |exit| %>
+          <tr id="exit_survey_<%= exit.id %>">
+            <td><%= exit.employee.document_number %></td>
+            <td><%= exit.employee.name %></td>
+            <td><%= exit.recorded_temperature_exit %></td>
+            <td><%= exit.new_temperature_recorded_exit%></td>
+            <td><%= exit.creation_date_and_time.strftime("%d-%m-%Y %I:%M %p") %></td>
+            <td>
+              <%= link_to "Editar", edit_exit_survey_path(exit), html_options = {class: "btn btn-info btn-xs", remote: true}%>
+              <%= link_to "Borrar", exit, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{exit.employee.name}?"}, class: "btn btn-danger btn-xs" %>
+            </td>
+          </tr>
+        <% end %>
 
-                    <div class="table-label-exit">
-                   <div>
-                     <%= form.check_box :Sore_throat,{},"si",{:class => "form-control"} %>
-                   </div>
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Congestión nasal</label>
 
-                    <div class="table-label-exit">
-                      <div>
-                      <%= form.check_box :Nasal_congestion,{},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Tos</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                      <%= form.check_box :Cough,{},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Dificultad para respirar</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                      <%= form.check_box :Difficulty_breathing,{},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-              <tr>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Fatiga</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                      <%= form.check_box :Fatigue,{},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Escalofríos</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                      <%= form.check_box :Shaking_chills, {},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Dolor de músculos</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                      <%= form.check_box :Muscle_pain, {},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Otro síntoma respiratorio</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                      <%= form.check_box :Another, {},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-              </tr>
-            </table>
-            <label class="controle-exit"> Describa el síntoma</label>
-            <div class="form-group">
-              <%= form.text_area :respiratory, {:class => "form-control", :rows => "3" } %>
-            </div>
-            <label class="controle-exit">Se hace entrega de los siguientes elementos de bioseguridad/protección:</label>
-            <table id="tablaEmployees" class="table table-bordered" width="90%">
-            <tr>
-              <th style="width: 21%; height: 15%">
-                <div class="form-group">
-                  <label class="controle-exit"> Tapabocas desechable</label>
-
-                  <div class="table-label-exit">
-                    <div>
-                      <%= form.check_box :disposable_covers,{},"si",{:class => "form-control"} %>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th style="width: 21%; height: 15%">
-                <div class="form-group">
-                  <label class="controle-exit">Respirador</label>
-
-                  <div class="table-label-exit">
-                    <div>
-                      <%= form.check_box :respirador,{},"si",{:class => "form-control"} %>
-                    </div>
-
-                  </div>
-                </div>
-              </th>
-              <th style="width: 21%; height: 15%">
-                <div class="form-group">
-                  <label class="controle-exit">Guantes de látex</label>
-
-                  <div class="table-label-exit">
-                    <div>
-                      <%= form.check_box :gloves_latex,{},"si",{:class => "form-control"} %>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th style="width: 21%; height: 15%">
-                <div class="form-group">
-                  <label class="controle-exit">Guantes de nitrilo</label>
-
-                  <div class="table-label-exit">
-                    <div>
-                      <%= form.check_box :gloves_nitrilo,{},"si",{:class => "form-control"} %>
-                    </div>
-                  </div>
-                </div>
-              </th>
-              <th style="width: 21%; height: 15%">
-                <div class="form-group">
-                  <label class="controle-exit">Guantes de caucho</label>
-
-                  <div class="table-label-exit">
-                    <div>
-                      <%= form.check_box :gloves_caucho,{},"si",{:class => "form-control"} %>
-                    </div>
-                  </div>
-                </div>
-              </th>
-            </tr>
-            </table>
-            <div class="form-group">
-              <label style="font-size: 21px" > Otro elemento</label>
-              <%= form.check_box :other_element,{},"si",{:class => "form-control"} %>
-              <%= form.text_field  :other_element, {:class => "form-control", :placeholder =>"¿Cuál? "} %>
-            </div>
-            <label style="font-size: 21px"> No aplica</label>
-            <%= form.check_box :not_other_element,{},"si",{:class => "form-control"} %>
-            <div class="form-group">
-              <%= form.text_field  :not_other_element, {:class => "form-control", :placeholder =>"¿Por qué?"} %>
-            </div>
-
-            <label class="controle-exit">Verifique si al finalizar la jornada realizó las siguientes acciones:</label>
-            <table id="tablaEmployees" class="table table-bordered" width="90%">
-              <tr>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit"> Lavado o desinfección de manos</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                        <%= form.check_box :camp_a,{},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Desechar los elementos de bioseguridad usados</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                        <%= form.check_box :camp_b,{},"si",{:class => "form-control"} %>
-                      </div>
-
-                    </div>
-                  </div>
-                </th>
-                <th style="width: 21%; height: 15%">
-                  <div class="form-group">
-                    <label class="controle-exit">Desinfección de los elementos de protección personal permanentes</label>
-
-                    <div class="table-label-exit">
-                      <div>
-                        <%= form.check_box :camp_c,{},"si",{:class => "form-control"} %>
-                      </div>
-                    </div>
-                  </div>
-                </th>
-
-              </tr>
-            </table>
-              <%= form.submit "Guardar", :class => 'btn btn-info glyphicon glyphicon-search', :onclick => "alert('Encuesta de salida guardada')"%>
-          <% end %>
-        </div>
-        <div class="form-check" style="padding: 0!important;">
-        </div>
-      </form>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
+
+<%=render 'modal_exit_surveys' %>

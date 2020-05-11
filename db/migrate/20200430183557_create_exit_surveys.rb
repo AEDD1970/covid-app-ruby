@@ -1,28 +1,31 @@
 class CreateExitSurveys < ActiveRecord::Migration[5.2]
   def up
     create_table :exit_surveys do |t|
-      t.string :Sore_throat
-      t.string :Nasal_congestion
-      t.string :Cough
-      t.string :Difficulty_breathing
-      t.string :Fatigue
-      t.string :Shaking_chills
-      t.string :Muscle_pain
-      t.string :Another
-      t.string :respiratory
-      t.string :temperature
-      t.string :new_temperature
+      t.string :recorded_temperature_exit
+      t.string :new_temperature_recorded_exit
+      t.boolean :sore_throat_exit
+      t.boolean :nasal_congestion_exit
+      t.boolean :cough_exit
+      t.boolean :difficulty_breathing_exit
+      t.boolean :fatigue_exit
+      t.boolean :shaking_chills_exit
+      t.boolean :muscle_pain_exit
+      t.boolean :other_respiratory_symptom_exit
+      t.string :which_respiratory_symptom_exit
+      t.boolean :disposable_face_mask_exit
+      t.boolean :respirator_exit
+      t.boolean :latex_gloves_exit
+      t.boolean :nitrile_gloves_exit
+      t.boolean :rubber_gloves_exit
+      t.boolean :another_item_exit
+      t.string :which_other_element_exit
+      t.boolean :does_not_apply_protection_exit
+      t.string :does_not_apply_because_exit
+      t.boolean :hand_disinfection_exit
+      t.boolean :discard_used_items_exit
+      t.boolean :disinfection_element_exit
       t.integer :employee_id
-      t.string :disposable_covers
-      t.string :respirador
-      t.string :gloves_latex
-      t.string :gloves_nitrilo
-      t.string :gloves_caucho
-      t.string :other_element
-      t.string :not_other_element
-      t.string :camp_a
-      t.string :camp_b
-      t.string :camp_c
+      t.datetime :creation_date_and_time
 
       t.timestamps
     end
