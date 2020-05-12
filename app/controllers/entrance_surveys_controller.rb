@@ -14,12 +14,7 @@ class EntranceSurveysController < ApplicationController
 
   def xls_report
     @entrance_survey = EntranceSurvey.all
-    #La variable @personal contiene a la lista del personal de una empresa x.
-    #     render xml:  "hello, world!",
-    # xlsx: 'report',
-    #            template: 'reports/entrance_surveys.xlsx.axlsx'
-    render xlsx: "Reporte de empleo #{Time.now.strftime('%d%m%Y%H%M%S')} ", template: 'reports/entrance_surveys.xlsx.axlsx'
-
+    render xlsx: "Reporte de entradas#{Time.now.strftime('%d%m%Y%H%M%S')} ", template: 'reports/entrance_surveys.xlsx.axlsx'
   end
 
   def new

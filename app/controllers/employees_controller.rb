@@ -24,9 +24,8 @@ class EmployeesController < ApplicationController
     else
       @employee.responsible = "ANDRES"
       @employee.responsible_position = "Resepcion"
-      @employee.weight
       @employee.imc = calculate_data
-      @employee.interpretation_id = 1
+      @employee.interpretation_id = calculate_portion
       @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
       respond_to do |format|
         if @employee.save
@@ -43,19 +42,19 @@ class EmployeesController < ApplicationController
   def calculate_data
     height = @employee.size
     weight = @employee.weight
-    result = weight / (height) ** 2
-    result.ceil(2)
+    @result = weight / (height) ** 2
+    @result.ceil(2)
   end
 
   def calculate_portion
-    if((calculate_data < 18.5) || (calculate_data == 18.5))
-      'OBESIDAD'
-    elsif((calculate_data > 18.5) && (calculate_data < 25))
-      'SOBREPESO'
-    elsif((calculate_data > 24.9) && (calculate_data < 30))
-      'NORMAL'
-    elsif((calculate_data > 30) && (calculate_data == 30))
-      'DESNUTRICIÓN'
+    if((@result < 18.5) || (@result == 18.5))
+      Interpretation.find(4).id
+    elsif((@result > 18.5) && (@result < 25))
+      Interpretation.find(3).id
+    elsif((@result > 24.9) && (@result < 30))
+      Interpretation.find(2).id
+    elsif((@result > 30) && (@result == 30))
+      Interpretation.find(1).id
     end
   end
 
@@ -80,10 +79,6 @@ class EmployeesController < ApplicationController
   end
 
   private
-
-  # def set_document_number
-  #   @employee = Employee.find_by_document_number(params[:document_number])
-  # end
 
   def set_employee
     @employee = Employee.find(params[:id])

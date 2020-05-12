@@ -15,6 +15,11 @@ class ExitSurveysController < ApplicationController
     end
   end
 
+  def output_reports
+    @exit_survey = ExitSurvey.all
+    render xlsx: "Reporte de salida#{Time.now.strftime('%d%m%Y%H%M%S')} ", template: 'reports/output_reports .xlsx.axlsx'
+  end
+
 
 
   # GET /exit_surveys/new

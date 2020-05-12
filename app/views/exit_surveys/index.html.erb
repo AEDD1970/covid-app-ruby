@@ -42,14 +42,14 @@
 
         <% @exit_surveys.each do |exit| %>
           <tr id="exit_survey_<%= exit.id %>">
-            <td><%= exit.employee.document_number %></td>
-            <td><%= exit.employee.name %></td>
+            <td><%= exit.employee&.document_number %></td>
+            <td><%= exit.employee&.name %></td>
             <td><%= exit.recorded_temperature_exit %></td>
             <td><%= exit.new_temperature_recorded_exit%></td>
             <td><%= exit.creation_date_and_time.strftime("%d-%m-%Y %I:%M %p") %></td>
             <td>
               <%= link_to "Editar", edit_exit_survey_path(exit), html_options = {class: "btn btn-info btn-xs", remote: true}%>
-              <%= link_to "Borrar", exit, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{exit.employee.name}?"}, class: "btn btn-danger btn-xs" %>
+              <%= link_to "Borrar", exit, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{exit.employee&.name}?"}, class: "btn btn-danger btn-xs" %>
             </td>
           </tr>
         <% end %>

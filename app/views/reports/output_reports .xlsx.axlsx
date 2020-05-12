@@ -1,0 +1,13 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Reporte") do |sheet|
+  sheet.add_row ['Documento de Identidad', 'Nombre','Tempera Registrada', 'Temperatura Nueva Registrada', 'Dolor de Garganta', 'Congestión nasal', 'Tos', 'Dificultad para respirar', 'Fatiga',
+  'Escalofríos', 'Dolor de músculos', 'Otro síntoma respiratorio', 'Describa el Síntoma', 'Tapabocas Desechable', 'Respirador', 'Guantes de Látex',
+  'Guantes de Nitrilo', 'Guantes de Caucho', 'Otro Elemento', '¿Cual?', 'No Aplica', '¿Por Que?', 'Lavado o Desinfección de Manos', 'Desechar los Elementos de Bioseguridad Usados',
+  'Desinfección de los Elementos de Protección Personal Permanentes']
+  @exit_survey.each do |f|
+    sheet.add_row [f.employee&.document_number, f.employee&.name,   f.recorded_temperature_exit, f.new_temperature_recorded_exit, f.sore_throat_exit, f.nasal_congestion_exit,
+    f.cough_exit, f.difficulty_breathing_exit, f.fatigue_exit, f.shaking_chills_exit, f.muscle_pain_exit, f.other_respiratory_symptom_exit, f.which_respiratory_symptom_exit,
+    f.disposable_face_mask_exit, f.respirator_exit, f.latex_gloves_exit, f.nitrile_gloves_exit, f.rubber_gloves_exit, f.another_item_exit, f.which_other_element_exit,
+    f.does_not_apply_protection_exit, f.does_not_apply_because_exit, f.hand_disinfection_exit, f.discard_used_items_exit, f.disinfection_element_exit]
+  end
+end
