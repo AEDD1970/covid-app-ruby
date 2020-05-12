@@ -16,48 +16,46 @@ class EmployeesController < ApplicationController
 
   def create
     @employee = Employee.new(employee_params)
-    if validate_params_create_employee
+    if Employee.where(:document_number => @employee.document_number).present?
+      render json: {
+          error: "el empleado con el numero de documento #{@employee.document_number} ya existe",
+          status: 400
+      }
     else
-      parameter_validation_for_validation
+      @employee.responsible = "ANDRES"
+      @employee.responsible_position = "Resepcion"
+      @employee.weight
+      @employee.imc = calculate_data
+      @employee.interpretation_id = 1
+      @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
+      respond_to do |format|
+        if @employee.save
+          format.json { head :no_content }
+          format.js
+        else
+          format.json { render json: @employee.errors.full_messages, status: :unprocessable_entity }
+          format.js { render :new }
+        end
+      end
     end
   end
 
   def calculate_data
     height = @employee.size
     weight = @employee.weight
-    result = weight / (height)**2
+    result = weight / (height) ** 2
     result.ceil(2)
   end
 
   def calculate_portion
-
-  end
-
-  def parameter_validation_for_validation
-    puts "#{@employee.pretty_inspect}--------<<<<<<<<<<"
-    @employee.responsible = "ANDRES"
-    @employee.responsible_position = "Resepcion"
-    @employee.weight
-    @employee.imc = calculate_data
-    @employee.interpretation_id = calculate_portion
-    @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
-    respond_to do |format|
-      if @employee.save
-        format.json { head :no_content }
-        format.js
-      else
-        format.json { render json: @employee.errors.full_messages, status: :unprocessable_entity }
-        format.js { render :new }
-      end
-    end
-  end
-
-  def validate_params_create_employee
-    if Employee.where(:document_number => @employee.document_number).present?
-      render json: {
-          error: "el empleado con el numero de documento #{@employee.document_number} ya existe",
-          status: 400
-      }
+    if((calculate_data < 18.5) || (calculate_data == 18.5))
+      'OBESIDAD'
+    elsif((calculate_data > 18.5) && (calculate_data < 25))
+      'SOBREPESO'
+    elsif((calculate_data > 24.9) && (calculate_data < 30))
+      'NORMAL'
+    elsif((calculate_data > 30) && (calculate_data == 30))
+      'DESNUTRICIÓN'
     end
   end
 

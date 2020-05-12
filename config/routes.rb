@@ -18,7 +18,16 @@ end
       get '/search' => 'entrance_surveys#index', :as => 'search'
       post 'reports/entrance_surveys.xls', to: 'entrance_surveys#xls_report'
     end
-    end
+  end
+
+  resources :reports
+
+  # , only: [:index, :create, :update, :destroy, :edit, :new] do
+  #   collection do
+  #     post 'reports/entrance_surveys.xls', to: 'entrance_surveys#xls_report'
+  #   end
+  # end
+
 
   # resources :employees, only: [:index, :create, :update, :destroy, :edit] do
   #   collection do

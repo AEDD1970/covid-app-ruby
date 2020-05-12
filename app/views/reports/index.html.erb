@@ -1,0 +1,40 @@
+<div style="align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex; margin-top: 5%">
+  <h1 style="color: #1b1daf; font-size: 60px"> Reportes </h1>
+</div>
+
+
+<div class="container">
+
+  <div class="row" style="margin-top: 10%">
+
+    <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <%= button_to "Generar reporte", { :controller => "entrance_surveys", :action => "xls_report"}, :style => 'width: 300px;background-color:  #1b1daf;height: 250px;border-radius: 25px;'  %>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <button class="zoom"  style="width: 300px;
+            height: 250px;
+            background-color:  #1b1daf;
+            border-radius: 25px;
+        ">
+
+          <img style="width: 210px; height: 110px; margin-top: -5%;    margin-bottom: 8%;">
+          <p style="color: white;
+              font-size: 21px;
+              margin-top: -3%;
+          "> Container</p>
+          <p style="color: white"></p>
+        </button>
+
+      </div>
+    </div>
+  <div class="w-100"></div>
+</div>
+</div>
