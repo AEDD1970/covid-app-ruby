@@ -25,7 +25,8 @@ class CreateEntranceSurveys < ActiveRecord::Migration[5.2]
       t.boolean :discard_used_items
       t.boolean :disinfection_element
       t.integer :employee_id
-      t.datetime :creation_date_and_time
+      t.date :date
+      t.string :hour
 
       t.timestamps
     end

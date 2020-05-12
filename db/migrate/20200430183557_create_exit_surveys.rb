@@ -25,7 +25,8 @@ class CreateExitSurveys < ActiveRecord::Migration[5.2]
       t.boolean :discard_used_items_exit
       t.boolean :disinfection_element_exit
       t.integer :employee_id
-      t.datetime :creation_date_and_time
+      t.date :date
+      t.string :hour
 
       t.timestamps
     end

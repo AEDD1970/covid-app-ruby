@@ -70,7 +70,8 @@ ActiveRecord::Schema.define(version: 2020_05_07_054948) do
     t.boolean "discard_used_items"
     t.boolean "disinfection_element"
     t.integer "employee_id"
-    t.datetime "creation_date_and_time"
+    t.date "date"
+    t.string "hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,7 +101,8 @@ ActiveRecord::Schema.define(version: 2020_05_07_054948) do
     t.boolean "discard_used_items_exit"
     t.boolean "disinfection_element_exit"
     t.integer "employee_id"
-    t.datetime "creation_date_and_time"
+    t.date "date"
+    t.string "hour"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

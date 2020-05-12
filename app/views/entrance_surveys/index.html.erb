@@ -36,7 +36,8 @@
           <th>Nombre</th>
           <th>Tempera Registrada</th>
           <th>Temperatura Nueva Registrada</th>
-          <th>Fecha y hora de creación</th>
+          <th>Fecha de entrada</th>
+          <th>Hora de entrada</th>
         </tr>
         </thead>
         <tbody>
@@ -48,7 +49,8 @@
               <td><%= entrance.employee&.name %></td>
               <td><%= entrance.recorded_temperature %></td>
               <td><%= entrance.new_temperature_recorded %></td>
-              <td><%= entrance.creation_date_and_time%></td>
+              <td><%= entrance.date%></td>
+              <td><%= entrance.hour%></td>
               <td>
                 <%= link_to "Editar", edit_entrance_survey_path(entrance), html_options = {class: "btn btn-info btn-xs", remote: true}%>
                 <%= link_to "Borrar", entrance, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el registro de: #{entrance.employee&.name}?"}, class: "btn btn-danger btn-xs" %>
