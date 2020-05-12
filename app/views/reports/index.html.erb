@@ -10,17 +10,17 @@
 
 <div class="container">
 
-  <div class="row" style="margin-top: 10%">
+  <div class="row" style="margin-top: 10%; display: flex; justify-content: center;">
 
     <div class="col-md-4">
-      <div class=" mb-4 box-shadow">
+      <div class=" mb-4 box-shadow" style="align-items: center; display: flex; flex-direction: column;">
         <%= button_to "Generar reporte de Entradas", { :controller => "entrance_surveys", :action => "xls_report"}, :style => 'width: 300px; 250px;border-radius: 25px;', :title =>"click para descargar"  %>
         <img src="https://4.bp.blogspot.com/-cVO8CTsGC1w/Um0SOZz6fDI/AAAAAAAAAok/dopUSBWisYs/s1600/Reporte+I.png" >
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="mb-4 box-shadow">
+      <div class=" mb-4 box-shadow" style="align-items: center; display: flex; flex-direction: column;">
         <%= button_to "Generar reportes de Salida", { :controller => "exit_surveys", :action => "output_reports"}, :style => 'width: 300px; 250px;border-radius: 25px;',  :title =>"click para descargar"%>
         <img src="https://4.bp.blogspot.com/-cVO8CTsGC1w/Um0SOZz6fDI/AAAAAAAAAok/dopUSBWisYs/s1600/Reporte+I.png" >
       </div>
