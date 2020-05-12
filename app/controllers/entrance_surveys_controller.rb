@@ -23,7 +23,7 @@ class EntranceSurveysController < ApplicationController
 
   def create
     @entrance_survey = EntranceSurvey.new(entrance_survey_params)
-    @entrance_survey.date =  Time.now.strftime("%m/%d/%Y")
+    @entrance_survey.date =  Time.now
     @entrance_survey.hour =  Time.now.strftime("%I:%M %p")
     @entrance_survey.employee_id = $user
     respond_to do |format|
