@@ -42,7 +42,7 @@ class EmployeesController < ApplicationController
   def calculate_data
     height = @employee.size
     weight = @employee.weight
-    @result = weight / (height)**2
+    @result = weight / height**2
     @result.ceil(2)
   end
 
