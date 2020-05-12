@@ -35,7 +35,7 @@ class ExitSurveysController < ApplicationController
   # POST /exit_surveys.json
   def create
     @exit_survey = ExitSurvey.new(exit_survey_params)
-    @exit_survey.date =  Time.now.strftime("%m/%d/%Y")
+    @exit_survey.date =  Time.now
     @exit_survey.hour =  Time.now.strftime("%I:%M %p")
     @exit_survey.employee_id = $user
     respond_to do |format|
