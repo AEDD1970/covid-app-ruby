@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_05_07_054948) do
   create_table "employees", force: :cascade do |t|
     t.string "responsible"
     t.string "responsible_position"
-    t.integer "document_number"
+    t.bigint "document_number"
     t.string "name"
     t.string "organizational_unit"
     t.string "position"

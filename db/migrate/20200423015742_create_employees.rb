@@ -3,7 +3,7 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
     create_table :employees do |t|
       t.string :responsible
       t.string :responsible_position
-      t.integer :document_number
+      t.integer :document_number, :limit => 8
       t.string :name
       t.string :organizational_unit
       t.string :position
