@@ -18,13 +18,12 @@ class EmployeesController < ApplicationController
     @employee = Employee.new
   end
 
-  def create
-    @employee = Employee.new(employee_params)
-    if Employee.where(:document_number => @employee.document_number).present?
-      render json: {
-          error: "el empleado con el numero de documento #{@employee.document_number} ya existe",
-          status: 400
-      }
+
+    def create
+      @employee = Employee.new(employee_params)
+      if Employee.where(:document_number => @employee.document_number).present?
+        flash[:alert] = "el empleado con el numero de documento #{@employee.document_number} ya existe"
+        redirect_to action: "create"
     else
       @employee.responsible = "ANDRES"
       @employee.responsible_position = "Resepcion"

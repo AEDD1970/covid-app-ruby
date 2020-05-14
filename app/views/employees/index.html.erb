@@ -7,6 +7,8 @@
   <h1 class="fas fa-user-friends"></h1>
 </h5>
 </div>
+
+
 <p style="font-size: 20px">Búsqueda de empleados</p>
 <%= form_tag(search_employees_path, :method => "get", class: 'navbar-form navbar-left') do %>
   <div class="input-group", id="searchEmployee">
@@ -16,6 +18,12 @@
     </div>
   </div>
 <% end %>
+
+<div style="margin-bottom: 1%; margin-top: 1%">
+  <% if flash[:alert] %>
+    <div class="alert-danger"><%= flash[:alert] %></div>
+  <% end %>
+</div>
 <div style="margin-top: 5%">
   <%= link_to new_employee_path, {remote: true, class: "btn btn-info", id: "anadir-employee-btn"} do %>
     <span>Registro</span>
