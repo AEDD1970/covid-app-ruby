@@ -32,7 +32,7 @@ class EmployeesController < ApplicationController
       @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
       respond_to do |format|
         if @employee.save
-          flash[:alert] = "El empleado #{@employee.name} se ha registrado con exito"
+          flash[:success] = "El empleado #{@employee.name} se ha registrado con exito"
           redirect_to action: "create"
           format.json { head :no_content }
           format.js
