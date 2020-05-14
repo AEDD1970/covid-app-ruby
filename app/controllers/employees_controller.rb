@@ -1,12 +1,16 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:edit, :update, :destroy]
 
+  $user = ""
   def index
-    if params[:search].blank?
-      @employees = Employee.all
-    else
-      @parameter = params[:search]
-      @employees = Employee.where(:document_number => @parameter)
+    employee= params[:search].to_i
+    @employees  = Employee.all
+    result =  Employee.find_by_document_number(employee)
+    if result.present?
+      $user = result.document_number
+      @employees = Employee.where(document_number: $user)
+    elsif !result.present? && employee != 0
+      @error = true
     end
   end
 

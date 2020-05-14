@@ -8,6 +8,7 @@ class EntranceSurveysController < ApplicationController
     result =  Employee.find_by_document_number(entrance_surveys)
     if result && entrance_surveys == result.document_number
       $user = result.id
+      @entrance_surveys = EntranceSurvey.where(employee_id: $user)
     end
 
   end
