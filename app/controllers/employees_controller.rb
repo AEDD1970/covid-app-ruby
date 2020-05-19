@@ -66,6 +66,8 @@ class EmployeesController < ApplicationController
   def update
     respond_to do |format|
       if @employee.update(employee_params)
+        flash[:notice] = "El empleado #{@employee.name} se ha editado con exito"
+        redirect_to action: "index"
         format.json { head :no_content }
         format.js
       else

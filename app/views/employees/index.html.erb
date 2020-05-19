@@ -19,6 +19,13 @@
 <% end %>
 
 <div style="margin-bottom: 1%; margin-top: 2%">
+  <% if flash[:notice] %>
+    <div class="alert-success"><%= flash[:notice] %></div>
+  <% end %>
+</div>
+
+
+<div style="margin-bottom: 1%; margin-top: 2%">
   <% if flash[:success] %>
     <div class="alert-success"><%= flash[:success] %></div>
   <% end %>

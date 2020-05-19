@@ -29,6 +29,8 @@ class EntranceSurveysController < ApplicationController
     @entrance_survey.employee_id = $user
     respond_to do |format|
         if @entrance_survey.save
+          flash[:success] = "La encuesta de #{@entrance_survey.employee.name} se ha creado con exito"
+          redirect_to action: "create"
           format.json { head :no_content }
           format.js
         else
@@ -44,6 +46,8 @@ class EntranceSurveysController < ApplicationController
   def update
     respond_to do |format|
       if @entrance_survey.update(entrance_survey_params)
+        flash[:success] = "La encuesta de #{@entrance_survey.employee.name} se ha editado con exito"
+        redirect_to action: "index"
         format.json { head :no_content }
         format.js
       else

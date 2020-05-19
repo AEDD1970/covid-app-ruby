@@ -19,6 +19,12 @@
   </div>
 <% end %>
 
+<div style="margin-bottom: 1%; margin-top: 2%">
+  <% if flash[:success] %>
+    <div class="alert-success"><%= flash[:success] %></div>
+  <% end %>
+</div>
+
 <div style="margin-top: 5%;  margin-left: 10%">
   <%= link_to new_exit_survey_path, {remote: true, class: "btn btn-info", id: "anadir-exit_survey-btn"} do %>
     <span>Nueva encuesta</span>

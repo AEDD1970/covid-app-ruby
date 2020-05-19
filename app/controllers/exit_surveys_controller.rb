@@ -40,6 +40,8 @@ class ExitSurveysController < ApplicationController
     @exit_survey.employee_id = $user
     respond_to do |format|
       if @exit_survey.save
+        flash[:success] = "La encuesta de #{@exit_survey.employee.name} se ha creado con exito"
+        redirect_to action: "create"
         format.json { head :no_content }
         format.js
       else
@@ -54,11 +56,13 @@ class ExitSurveysController < ApplicationController
   def update
     respond_to do |format|
       if @exit_survey.update(exit_survey_params)
-        format.html { redirect_to @exit_survey, notice: 'Exit survey was successfully updated.' }
-        format.json { render :show, status: :ok, location: @exit_survey }
+        flash[:success] = "La encuesta de #{@exit_survey.employee.name} se ha editado con exito"
+        redirect_to action: "index"
+        format.json { head :no_content }
+        format.js
       else
-        format.html { render :edit }
-        format.json { render json: @exit_survey.errors, status: :unprocessable_entity }
+        format.json { render json: @exit_survey.errors.full_messages, status: :unprocessable_entity }
+        format.js { render :edit}
       end
     end
   end
