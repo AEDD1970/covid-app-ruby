@@ -67,6 +67,13 @@
       </table>
     </div>
   </div>
+  <ul class="pagination justify-content-end">
+    <li class="disablesd"> <%= will_paginate(@exit_surveys,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0, list_classes: %w(pagination justify-content-end) )%></li>
+  </ul>
+
+  <div>
+    <span class="pull-right"><%= page_entries_info(@exit_surveys) %></span>
+  </div>
 </div>
 
 <%=render 'modal_exit_surveys' %>

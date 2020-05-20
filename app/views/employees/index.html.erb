@@ -96,6 +96,13 @@
       <% end %>
     </div>
   </div>
-</div>
 
+      <ul class="pagination justify-content-end">
+        <li class="disablesd"> <%= will_paginate(@employees,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0, list_classes: %w(pagination justify-content-end) )%></li>
+      </ul>
+  <div>
+    <span class="pull-right"><%= page_entries_info(@employees) %></span>
+  </div>
+
+</div>
 <%=render 'modal_employees' %>

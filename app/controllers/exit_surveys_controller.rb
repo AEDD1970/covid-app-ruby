@@ -4,7 +4,7 @@ class ExitSurveysController < ApplicationController
   $user = ""
   def index
     exit_surveys= params[:search].to_i
-    @exit_surveys = ExitSurvey.all
+    @exit_surveys = ExitSurvey.all.paginate(:page => params[:page], :per_page => 5)
     result =  Employee.find_by_document_number(exit_surveys)
     if result && exit_surveys == result.document_number
 

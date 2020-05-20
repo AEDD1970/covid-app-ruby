@@ -4,7 +4,7 @@ class EmployeesController < ApplicationController
   $user = ""
   def index
     employee= params[:search].to_i
-    @employees  = Employee.all
+    @employees  = Employee.all.paginate(:page => params[:page], :per_page => 5)
     result =  Employee.find_by_document_number(employee)
     if result.present?
       $user = result.document_number
@@ -13,7 +13,6 @@ class EmployeesController < ApplicationController
       @error = true
     end
   end
-  ###
 
   def new
     @employee = Employee.new
