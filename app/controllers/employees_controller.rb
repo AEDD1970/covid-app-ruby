@@ -6,6 +6,7 @@ class EmployeesController < ApplicationController
     employee= params[:search].to_i
     @employees  = Employee.all.paginate(:page => params[:page], :per_page => 5)
     result =  Employee.find_by_document_number(employee)
+
     if result.present?
       $user = result.document_number
       @employees = Employee.where(document_number: $user)
