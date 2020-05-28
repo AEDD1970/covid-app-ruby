@@ -97,16 +97,16 @@
     </div>
   </div>
 
-      <ul class="pagination justify-content-center" style="margin-top: -2%">
-        <li class="disablesd"> <%= will_paginate @employees,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0, list_classes: %w(pagination justify-content-center) %></li>
-      </ul>
-  <div>
-    <span style="align-items: center;
-        align-content: center;
-        justify-content: center;
-        display: flex;" >
-      <%= page_entries_info(@employees) %></span>
-  </div>
+<!--      <ul class="pagination justify-content-center" style="margin-top: -2%">-->
+<!--        <li class="disablesd"> <%#= will_paginate @employees,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0, list_classes: %w(pagination justify-content-center) %></li>-->
+<!--      </ul>-->
+<!--  <div>-->
+<!--    <span style="align-items: center;-->
+<!--        align-content: center;-->
+<!--        justify-content: center;-->
+<!--        display: flex;" >-->
+<!--      <%#= page_entries_info(@employees) %></span>-->
+<!--  </div>-->
 
 </div>
 <%=render 'modal_employees' %>

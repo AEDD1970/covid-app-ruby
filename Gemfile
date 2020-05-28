@@ -11,6 +11,8 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap4'
 
+gem 'sweetalert2'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'axlsx_rails', '>= 0.5.1'

@@ -67,17 +67,17 @@
       </table>
     </div>
   </div>
-  <ul class="pagination justify-content-center" style="margin-top: -2%">
-    <li class="disablesd"> <%= will_paginate(@exit_surveys,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0, list_classes: %w(pagination justify-content-center) )%></li>
-  </ul>
+<!--  <ul class="pagination justify-content-center" style="margin-top: -2%">-->
+<!--    <li class="disablesd"> <%#= will_paginate(@exit_surveys,:previous_label => "&laquo;", :next_label => "&raquo;",:class=>"small-font",:outer_window => 1,:inner_window => 0, list_classes: %w(pagination justify-content-center) )%></li>-->
+<!--  </ul>-->
 
-  <div>
-    <span style="align-items: center;
-        align-content: center;
-        justify-content: center;
-        display: flex;">
-      <%= page_entries_info(@exit_surveys) %></span>
-  </div>
+<!--  <div>-->
+<!--    <span style="align-items: center;-->
+<!--        align-content: center;-->
+<!--        justify-content: center;-->
+<!--        display: flex;">-->
+<!--      <%#= page_entries_info(@exit_surveys) %></span>-->
+<!--  </div>-->
 </div>
 
 <%=render 'modal_exit_surveys' %>
