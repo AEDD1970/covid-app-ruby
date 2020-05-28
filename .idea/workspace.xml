@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:heroku_production" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app-cod-hr.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1avFA5pAhpP6mFkNbriaBt8Fcp8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+      <recent name="$PROJECT_DIR$/app/assets" />
+      <recent name="$PROJECT_DIR$/app/views/reports" />
+      <recent name="$PROJECT_DIR$/app/controllers" />
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+      <recent name="$PROJECT_DIR$/app/assets/javascripts" />
+    </key>
+  </component>
+  <component name="RunManager" selected="IRB console.Rails console: app-cod-hr">
+    <configuration name="IRB console: app-cod-hr" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="app-cod-hr" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$APPLICATION_HOME_DIR$/plugins/ruby/rb/testing/runner/irb.rb" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="--simple-prompt" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Rails console: app-cod-hr" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="app-cod-hr" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$MODULE_DIR$/bin/rails" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console -- --simple-prompt" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Development: app-cod-hr" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="app-cod-hr" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Production: app-cod-hr" type="RailsRunConfigurationType" factoryName="Rails">
+      <module name="app-cod-hr" />
+      <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="production" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spec: app-cod-hr" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="app-cod-hr" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="spec" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":rspec " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test: app-cod-hr" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="app-cod-hr" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="test" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="test" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE=":test_unit " />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TESTOPTS" VALUE="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="IRB console.Rails console: app-cod-hr" />
+        <item itemvalue="IRB console.IRB console: app-cod-hr" />
+        <item itemvalue="IRB console.IRB console: app-cod-hr" />
+        <item itemvalue="IRB console.Rails console: app-cod-hr" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="" />
+      <created>1587608013853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587608013853</updated>
+      <workItem from="1587608019464" duration="18412000" />
+      <workItem from="1587654162085" duration="5105000" />
+      <workItem from="1587675614041" duration="518000" />
+      <workItem from="1587993677643" duration="19429000" />
+      <workItem from="1588082917631" duration="25053000" />
+      <workItem from="1588116781957" duration="2094000" />
+      <workItem from="1588168873205" duration="2845000" />
+      <workItem from="1588191029394" duration="6980000" />
+      <workItem from="1588256498440" duration="12053000" />
+      <workItem from="1588297437491" duration="9574000" />
+      <workItem from="1588535609282" duration="27382000" />
+      <workItem from="1588577917464" duration="1376000" />
+      <workItem from="1588599792402" duration="22152000" />
+      <workItem from="1588630583325" duration="4658000" />
+      <workItem from="1588686571329" duration="24862000" />
+      <workItem from="1588731379121" duration="1961000" />
+      <workItem from="1588775380112" duration="21706000" />
+      <workItem from="1588833159596" duration="5542000" />
+      <workItem from="1588860447508" duration="855000" />
+      <workItem from="1588861318802" duration="7530000" />
+      <workItem from="1588868869812" duration="14565000" />
+      <workItem from="1588944328330" duration="30383000" />
+      <workItem from="1589206145824" duration="8207000" />
+      <workItem from="1589242743412" duration="15489000" />
+      <workItem from="1589292817273" duration="10638000" />
+      <workItem from="1589317984218" duration="1331000" />
+      <workItem from="1589325080208" duration="2412000" />
+      <workItem from="1589468249484" duration="19996000" />
+      <workItem from="1589552445658" duration="2432000" />
+      <workItem from="1589583524197" duration="544000" />
+      <workItem from="1589902182000" duration="2769000" />
+      <workItem from="1589921778614" duration="5721000" />
+      <workItem from="1589990463732" duration="12708000" />
+      <workItem from="1590692601323" duration="386000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/ivan/Documentos/Proyecto HR/app-cod-hr/db/migrate" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1823" y="249" width="598" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588717401947">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="376" y="198" width="671" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588093864386" />
+    <state x="1823" y="249" width="598" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588717401947" />
+    <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588117622559">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588117622559" />
+    <state x="31" y="0" width="1720" height="882" key="DiffContextDialog" timestamp="1589249502580">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="31" y="0" width="1720" height="882" key="DiffContextDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589249502580" />
+    <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589993338645">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588301035136" />
+    <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589993338645" />
+    <state width="1874" height="293" key="GridCell.Tab.0.bottom" timestamp="1590014986579">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1253" height="224" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
+    <state width="1874" height="293" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590014986579" />
+    <state width="1874" height="258" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
+    <state width="1874" height="293" key="GridCell.Tab.0.center" timestamp="1590014986579">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1253" height="224" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
+    <state width="1874" height="293" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590014986579" />
+    <state width="1874" height="258" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
+    <state width="1874" height="293" key="GridCell.Tab.0.left" timestamp="1590014986579">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1253" height="224" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
+    <state width="1874" height="293" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590014986579" />
+    <state width="1874" height="258" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
+    <state width="1874" height="293" key="GridCell.Tab.0.right" timestamp="1590014986579">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1253" height="224" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
+    <state width="1874" height="293" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590014986579" />
+    <state width="1874" height="258" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
+    <state width="1253" height="175" key="GridCell.Tab.1.bottom" timestamp="1587609261114">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.bottom/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1587609261114" />
+    <state width="1253" height="175" key="GridCell.Tab.1.center" timestamp="1587609261114">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.center/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1587609261114" />
+    <state width="1253" height="175" key="GridCell.Tab.1.left" timestamp="1587609261114">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.left/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1587609261114" />
+    <state width="1253" height="175" key="GridCell.Tab.1.right" timestamp="1587609261114">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state width="1253" height="175" key="GridCell.Tab.1.right/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1587609261114" />
+    <state x="2066" y="222" width="510" height="633" key="RollbackChangesDialog" timestamp="1589992769247">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2066" y="222" width="510" height="633" key="RollbackChangesDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589992769247" />
+    <state x="2169" y="454" width="303" height="169" key="VCS.ChangelistChooser" timestamp="1588985017320">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2169" y="454" width="303" height="169" key="VCS.ChangelistChooser/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588985017320" />
+    <state x="1514" y="143" width="1485" height="792" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589993518690">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="167" y="125" width="1079" height="543" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588299663765" />
+    <state x="1514" y="143" width="1485" height="792" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589993518690" />
+    <state x="2097" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588867277406">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2097" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588867277406" />
+    <state x="67" y="51" width="1299" height="717" key="dock-window-1" timestamp="1589254823684">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="1537" y="0" width="892" height="500" maximized="true" key="dock-window-1/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588294634882" />
+    <state x="67" y="51" width="1299" height="717" key="dock-window-1/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589254823684" />
+    <state x="1581" y="398" width="1161" height="545" key="dock-window-2" timestamp="1588578235857">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1663" y="0" width="982" height="423" key="dock-window-2/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588145068326" />
+    <state x="1581" y="398" width="1161" height="545" key="dock-window-2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588578235857" />
+    <state x="1869" y="160" width="914" height="761" key="find.popup" timestamp="1589990578290">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="407" y="137" width="618" height="522" key="find.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588303367748" />
+    <state x="1869" y="160" width="914" height="761" key="find.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589990578290" />
+    <state x="407" y="137" width="619" height="580" key="find.popup/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588826423653" />
+    <state x="365" y="115" width="700" height="530" key="recent.locations.popup" timestamp="1588086378204">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="365" y="115" width="700" height="530" key="recent.locations.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588086378204" />
+    <state x="380" y="175" key="run.anything.popup" timestamp="1588788017209">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588304696667" />
+    <state x="1829" y="216" key="run.anything.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588717955751" />
+    <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588788017209" />
+    <state x="1827" y="90" width="994" height="989" key="search.everywhere.popup" timestamp="1590692817935">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1693" y="64" width="704" height="703" key="search.everywhere.popup/67.27.1299.741/1366.0.1360.768@1366.0.1360.768" timestamp="1588001321818" />
+    <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588302566000" />
+    <state x="1827" y="90" width="994" height="989" key="search.everywhere.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590692817935" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/app_cod_hr@Development__app_cod_hr.rcov" NAME="Development: app-cod-hr Coverage Results" MODIFIED="1587609248506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
+    <SUITE FILE_PATH="coverage/app_cod_hr@IRB_console__app_cod_hr.rcov" NAME="IRB console: app-cod-hr Coverage Results" MODIFIED="1588830528199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
+    <SUITE FILE_PATH="coverage/app_cod_hr@Rails_console__app_cod_hr.rcov" NAME="Rails console: app-cod-hr Coverage Results" MODIFIED="1589990652104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
+  </component>
+</project>
