@@ -1,6 +1,8 @@
 class EntranceSurveysController < ApplicationController
   before_action :set_entrance_survey, only: [:edit, :update, :destroy]
 
+  @value = 38
+
   $user = ""
   def index
     entrance_surveys= params[:search].to_i
