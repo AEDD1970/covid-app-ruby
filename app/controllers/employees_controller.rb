@@ -1,6 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:edit, :update, :destroy]
-#t
+#states
   $user = ""
   def index
     employee= params[:search].to_i
