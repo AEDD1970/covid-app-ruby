@@ -2,6 +2,16 @@
   <div class="form-group">
     <h4 class="control-label">Datos de la encuesta:</h4>
   </div>
+  <style>
+    .classcheck {
+      position: relative;
+      top: 30px;
+    }
+    .classcheck2 {
+      position: relative;
+      top: 60px;
+    }
+  </style>
       <script>
         function habilitar(value)
         {
@@ -55,7 +65,7 @@
                 <label class="controle-init">Congestión nasal</label>
 
                 <div class="table-label-int">
-                  <div>
+                  <div class="classcheck">
                     <%= f.check_box :nasal_congestion, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -66,7 +76,7 @@
                 <label class="controle-init">Tos</label>
 
                 <div class="table-label-int">
-                  <div>
+                  <div class="classcheck">
                     <%= f.check_box :cough, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -90,7 +100,7 @@
                 <label class="controle-init">Fatiga</label>
 
                 <div class="table-label-int">
-                  <div>
+                  <div class="classcheck">
                     <%= f.check_box :fatigue, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -101,7 +111,7 @@
                 <label class="controle-init">Escalofríos</label>
 
                 <div class="table-label-int">
-                  <div>
+                  <div class="classcheck">
                     <%= f.check_box :shaking_chills, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -150,7 +160,7 @@
                 <label class="controle-exit"> Tapabocas desechable</label>
 
                 <div class="table-label-exit">
-                  <div>
+                  <div class="classcheck">
                     <%= f.check_box :disposable_face_mask, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -161,7 +171,7 @@
                 <label class="controle-exit">Respirador</label>
 
                 <div class="table-label-exit">
-                  <div>
+                  <div style="position: relative;top: 59px;">
                     <%= f.check_box :respirator, { :class => "form-check-init" }, "true", "false" %>
                   </div>
 
@@ -173,7 +183,7 @@
                 <label class="controle-exit">Guantes de látex</label>
 
                 <div class="table-label-exit">
-                  <div>
+                  <div class="classcheck">
                     <%= f.check_box :latex_gloves, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -184,7 +194,7 @@
                 <label class="controle-exit">Guantes de nitrilo</label>
 
                 <div class="table-label-exit">
-                  <div>
+                  <div class="classcheck">
                     <%= f.check_box :nitrile_gloves, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -225,7 +235,7 @@
                 <label class="controle-exit"> Lavado o desinfección de manos</label>
 
                 <div class="table-label-exit">
-                  <div>
+                  <div class="classcheck2">
                     <%= f.check_box :hand_disinfection, { :class => "form-check-init" }, "true", "false" %>
                   </div>
                 </div>
@@ -236,7 +246,7 @@
                 <label class="controle-exit">Desechar los elementos de bioseguridad usados</label>
 
                 <div class="table-label-exit">
-                  <div>
+                  <div class="classcheck2">
                     <%= f.check_box :discard_used_items, { :class => "form-check-init" }, "true", "false" %>
                   </div>
 
