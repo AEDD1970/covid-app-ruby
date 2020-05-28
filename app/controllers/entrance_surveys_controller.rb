@@ -4,7 +4,8 @@ class EntranceSurveysController < ApplicationController
   $user = ""
   def index
     entrance_surveys= params[:search].to_i
-    @entrance_surveys  = EntranceSurvey.all.paginate(:page => params[:page], :per_page => 5)
+    @entrance_surveys  = EntranceSurvey.all
+    #.paginate(:page => params[:page], :per_page => 5)
     result =  Employee.find_by_document_number(entrance_surveys)
     if result && entrance_surveys == result.document_number
       $user = result.id
