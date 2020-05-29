@@ -25,14 +25,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.rakeTasks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/app-cod-hr.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/app-cod-hr.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/entrance_surveys_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/entrance_surveys_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/entrance_surveys/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/entrance_surveys/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/entrance_surveys/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/entrance_surveys/index.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Escritorio/Admin-IHR/admininteractive" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -81,7 +83,7 @@
       <recent name="$PROJECT_DIR$/app/assets/javascripts" />
     </key>
   </component>
-  <component name="RunManager" selected="IRB console.Rails console: app-cod-hr">
+  <component name="RunManager" selected="Rails.Development: app-cod-hr">
     <configuration name="IRB console: app-cod-hr" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="app-cod-hr" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -124,7 +126,7 @@
       <module name="app-cod-hr" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -148,7 +150,7 @@
       <module name="app-cod-hr" />
       <predefined_log_file enabled="true" id="RUBY_RAILS_SERVER" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
@@ -271,6 +273,9 @@
       <workItem from="1589921778614" duration="5721000" />
       <workItem from="1589990463732" duration="12708000" />
       <workItem from="1590692601323" duration="386000" />
+      <workItem from="1590693001816" duration="1718000" />
+      <workItem from="1590696500030" duration="8747000" />
+      <workItem from="1590758192409" duration="961000" />
     </task>
     <servers />
   </component>
@@ -338,11 +343,11 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="31" y="0" width="1720" height="882" key="DiffContextDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589249502580" />
-    <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl" timestamp="1589993338645">
+    <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl" timestamp="1590698817726">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588301035136" />
-    <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589993338645" />
+    <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590698817726" />
     <state width="1874" height="293" key="GridCell.Tab.0.bottom" timestamp="1590014986579">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -391,11 +396,11 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2169" y="454" width="303" height="169" key="VCS.ChangelistChooser/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588985017320" />
-    <state x="1514" y="143" width="1485" height="792" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589993518690">
+    <state x="1514" y="143" width="1485" height="792" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590708035648">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="167" y="125" width="1079" height="543" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588299663765" />
-    <state x="1514" y="143" width="1485" height="792" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1589993518690" />
+    <state x="1514" y="143" width="1485" height="792" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590708035648" />
     <state x="2097" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588867277406">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -420,11 +425,11 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="365" y="115" width="700" height="530" key="recent.locations.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588086378204" />
-    <state x="380" y="175" key="run.anything.popup" timestamp="1588788017209">
-      <screen x="67" y="27" width="1299" height="741" />
+    <state x="1829" y="216" key="run.anything.popup" timestamp="1590705096793">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588304696667" />
-    <state x="1829" y="216" key="run.anything.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588717955751" />
+    <state x="1829" y="216" key="run.anything.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590705096793" />
     <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588788017209" />
     <state x="1827" y="90" width="994" height="989" key="search.everywhere.popup" timestamp="1590692817935">
       <screen x="1366" y="0" width="1920" height="1080" />
