@@ -25,19 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/initializers/sweetify.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/app-cod-hr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app-cod-hr.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/employees_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/employees_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/entrance_surveys_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/entrance_surveys_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/exit_surveys_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/exit_surveys_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/employees/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employees/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/entrance_surveys/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/entrance_surveys/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/entrance_surveys/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/entrance_surveys/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/exit_surveys/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/exit_surveys/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/initializers/sweetify.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/sweetify.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,7 +269,7 @@
       <workItem from="1590696500030" duration="8747000" />
       <workItem from="1590758192409" duration="14455000" />
       <workItem from="1590794559229" duration="3158000" />
-      <workItem from="1590797754035" duration="367000" />
+      <workItem from="1590797754035" duration="1532000" />
     </task>
     <servers />
   </component>
