@@ -40,7 +40,8 @@ $.rails.confirmed = function(link){
 $.rails.showConfirmationDialog = function(link){
     var message = link.data("confirm");
     swal({
-        title: message,
+        title: 'Eliminar',
+        text: message,
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',

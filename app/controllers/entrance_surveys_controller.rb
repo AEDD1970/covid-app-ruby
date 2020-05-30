@@ -30,14 +30,15 @@ class EntranceSurveysController < ApplicationController
     @entrance_survey.hour = Time.now.strftime("%I:%M %p")
     @entrance_survey.employee_id = $user
     if @entrance_survey.recorded_temperature.to_i >= 38
-      flash[:alert] = "La temperatura es mayor o igual a 38°C, es necesario tomar nuevamente la temperatura transcurridos 15 minutos"
-      redirect_to action: :index
+      sweetalert_warning("La temperatura del empleado #{@entrance_survey.employee.name} con numero de documento #{@entrance_survey.employee.document_number} es mayor 38°C, es necesario tomar nuevamente la temperatura transcurridos 15 minutos", 'Temperatura alta', persistent: 'Aceptar')
+      redirect_to action: :create
+      @entrance_survey.save
     else
       @entrance_survey.recorded_temperature.to_s
       respond_to do |format|
         if @entrance_survey.save
-          flash[:success] = "La encuesta de #{@entrance_survey.employee.name} se ha creado con exito"
-          redirect_to action: "create"
+          sweetalert_success("La encuesta de #{@entrance_survey.employee.name} se ha creado con exito", 'Creado', persistent: 'Aceptar')
+          redirect_to action: :create
           format.json { head :no_content }
           format.js
         else
@@ -59,8 +60,8 @@ class EntranceSurveysController < ApplicationController
   def update
     respond_to do |format|
       if @entrance_survey.update(entrance_survey_params)
-        flash[:success] = "La encuesta de #{@entrance_survey.employee.name} se ha editado con exito"
-        redirect_to action: "index"
+        sweetalert_success("La encuesta de #{@entrance_survey.employee.name} se ha editado con exito", 'Actualizado', persistent: 'Aceptar')
+        redirect_to action: :index
         format.json { head :no_content }
         format.js
       else

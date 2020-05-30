@@ -2,11 +2,12 @@ class EmployeesController < ApplicationController
   before_action :set_employee, only: [:edit, :update, :destroy]
 
   $user = ""
+
   def index
-    employee= params[:search].to_i
-    @employees  = Employee.all
+    employee = params[:search].to_i
+    @employees = Employee.all
     #.paginate(:page => params[:page], :per_page => 5)
-    result =  Employee.find_by_document_number(employee)
+    result = Employee.find_by_document_number(employee)
 
     if result.present?
       $user = result.document_number
@@ -21,11 +22,11 @@ class EmployeesController < ApplicationController
   end
 
 
-    def create
-      @employee = Employee.new(employee_params)
-      if Employee.where(:document_number => @employee.document_number).present?
-        flash[:alert] = "el empleado con el numero de documento #{@employee.document_number} ya existe"
-        redirect_to action: "create"
+  def create
+    @employee = Employee.new(employee_params)
+    if Employee.where(:document_number => @employee.document_number).present?
+      sweetalert_warning("el empleado con el numero de documento #{@employee.document_number} ya existe", 'Ya existe', persistent: 'Aceptar')
+      redirect_to action: "create"
     else
       @employee.responsible = "ANDRES"
       @employee.responsible_position = "Resepcion"
@@ -34,7 +35,7 @@ class EmployeesController < ApplicationController
       @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
       respond_to do |format|
         if @employee.save
-          flash[:success] = "El empleado #{@employee.name} se ha registrado con exito"
+          sweetalert_success("El empleado #{@employee.name} se ha registrado con exito", 'Creado', persistent: 'Aceptar')
           redirect_to action: "create"
           format.json { head :no_content }
           format.js
@@ -49,18 +50,18 @@ class EmployeesController < ApplicationController
   def calculate_data
     height = @employee.size
     weight = @employee.weight
-    @result = weight / height**2
+    @result = weight / height ** 2
     @result.ceil(2)
   end
 
   def calculate_portion
-    if((@result < 18.5) || (@result == 18.5))
+    if ((@result < 18.5) || (@result == 18.5))
       Interpretation.find(4).id
-    elsif((@result > 18.5) && (@result < 25))
+    elsif ((@result > 18.5) && (@result < 25))
       Interpretation.find(3).id
-    elsif((@result > 24.9) && (@result < 30))
+    elsif ((@result > 24.9) && (@result < 30))
       Interpretation.find(2).id
-    elsif((@result > 30) && (@result == 30))
+    elsif ((@result > 30) && (@result == 30))
       Interpretation.find(1).id
     end
   end
@@ -68,7 +69,7 @@ class EmployeesController < ApplicationController
   def update
     respond_to do |format|
       if @employee.update(employee_params)
-        flash[:notice] = "El empleado #{@employee.name} se ha editado con exito"
+        sweetalert_success("El empleado #{@employee.name} se ha editado con exito", 'Actualizado', persistent: 'Aceptar')
         redirect_to action: "index"
         format.json { head :no_content }
         format.js

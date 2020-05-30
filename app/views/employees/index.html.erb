@@ -18,24 +18,6 @@
   </div>
 <% end %>
 
-<div style="margin-bottom: 1%; margin-top: 2%">
-  <% if flash[:notice] %>
-    <div class="alert-success"><%= flash[:notice] %></div>
-  <% end %>
-</div>
-
-
-<div style="margin-bottom: 1%; margin-top: 2%">
-  <% if flash[:success] %>
-    <div class="alert-success"><%= flash[:success] %></div>
-  <% end %>
-</div>
-
-<div style="margin-bottom: 1%; margin-top: 1%">
-  <% if flash[:alert] %>
-    <div class="alert-danger"><%= flash[:alert] %></div>
-  <% end %>
-</div>
 <div style="margin-top: 5%">
   <%= link_to new_employee_path, {remote: true, class: "btn btn-info", id: "anadir-employee-btn"} do %>
     <span>Registro</span>
@@ -110,3 +92,4 @@
 
 </div>
 <%=render 'modal_employees' %>
+<%= render 'sweetify/alert' %>

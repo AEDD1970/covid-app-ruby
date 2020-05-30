@@ -2,11 +2,12 @@ class ExitSurveysController < ApplicationController
   before_action :set_exit_survey, only: [:show, :edit, :update, :destroy]
 
   $user = ""
+
   def index
-    exit_surveys= params[:search].to_i
+    exit_surveys = params[:search].to_i
     @exit_surveys = ExitSurvey.all
     #.paginate(:page => params[:page], :per_page => 5)
-    result =  Employee.find_by_document_number(exit_surveys)
+    result = Employee.find_by_document_number(exit_surveys)
     if result && exit_surveys == result.document_number
 
       $user = result.id
@@ -22,7 +23,6 @@ class ExitSurveysController < ApplicationController
   end
 
 
-
   # GET /exit_surveys/new
   def new
     @exit_survey = ExitSurvey.new
@@ -36,18 +36,25 @@ class ExitSurveysController < ApplicationController
   # POST /exit_surveys.json
   def create
     @exit_survey = ExitSurvey.new(exit_survey_params)
-    @exit_survey.date =  Time.now
-    @exit_survey.hour =  Time.now.strftime("%I:%M %p")
+    @exit_survey.date = Time.now
+    @exit_survey.hour = Time.now.strftime("%I:%M %p")
     @exit_survey.employee_id = $user
-    respond_to do |format|
-      if @exit_survey.save
-        flash[:success] = "La encuesta de #{@exit_survey.employee.name} se ha creado con exito"
-        redirect_to action: "create"
-        format.json { head :no_content }
-        format.js
-      else
-        format.json { render json: @exit_survey.errors.full_messages, status: :unprocessable_entity }
-        format.js { render :new }
+    if @exit_survey.recorded_temperature_exit.to_i >= 38
+      sweetalert_warning("La temperatura del empleado #{@exit_survey.employee.name} con numero de documento #{@exit_survey.employee.document_number} es mayor 38°C, es necesario tomar nuevamente la temperatura transcurridos 15 minutos", 'Temperatura alta', persistent: 'Aceptar')
+      redirect_to action: :create
+      @exit_survey.save
+    else
+      @exit_survey.recorded_temperature_exit.to_s
+      respond_to do |format|
+        if @exit_survey.save
+          sweetalert_success("La encuesta de #{@exit_survey.employee.name} se ha creado con exito", 'Creado', persistent: 'Aceptar')
+          redirect_to action: :create
+          format.json { head :no_content }
+          format.js
+        else
+          format.json { render json: @exit_survey.errors.full_messages, status: :unprocessable_entity }
+          format.js { render :new }
+        end
       end
     end
   end
@@ -57,13 +64,13 @@ class ExitSurveysController < ApplicationController
   def update
     respond_to do |format|
       if @exit_survey.update(exit_survey_params)
-        flash[:success] = "La encuesta de #{@exit_survey.employee.name} se ha editado con exito"
-        redirect_to action: "index"
+        sweetalert_success("La encuesta de #{@exit_survey.employee.name} se ha editado con exito", 'Actualizado', persistent: 'Aceptar')
+        redirect_to action: :index
         format.json { head :no_content }
         format.js
       else
         format.json { render json: @exit_survey.errors.full_messages, status: :unprocessable_entity }
-        format.js { render :edit}
+        format.js { render :edit }
       end
     end
   end
@@ -73,19 +80,20 @@ class ExitSurveysController < ApplicationController
   def destroy
     @exit_survey.destroy
     respond_to do |format|
-      format.html { redirect_to exit_surveys_url, notice: 'Exit survey was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_exit_survey
-      @exit_survey = ExitSurvey.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def exit_survey_params
-      params.require(:exit_survey).permit(:recorded_temperature_exit, :new_temperature_recorded_exit, :sore_throat_exit, :nasal_congestion_exit, :cough_exit, :difficulty_breathing_exit, :fatigue_exit, :shaking_chills_exit, :muscle_pain_exit, :other_respiratory_symptom_exit, :which_respiratory_symptom_exit, :disposable_face_mask_exit, :respirator_exit, :latex_gloves_exit, :nitrile_gloves_exit, :rubber_gloves_exit, :another_item_exit, :which_other_element_exit, :does_not_apply_protection_exit, :does_not_apply_because_exit, :hand_disinfection_exit, :discard_used_items_exit, :disinfection_element_exit, :employee_id, :date, :hour)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_exit_survey
+    @exit_survey = ExitSurvey.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def exit_survey_params
+    params.require(:exit_survey).permit(:recorded_temperature_exit, :new_temperature_recorded_exit, :sore_throat_exit, :nasal_congestion_exit, :cough_exit, :difficulty_breathing_exit, :fatigue_exit, :shaking_chills_exit, :muscle_pain_exit, :other_respiratory_symptom_exit, :which_respiratory_symptom_exit, :disposable_face_mask_exit, :respirator_exit, :latex_gloves_exit, :nitrile_gloves_exit, :rubber_gloves_exit, :another_item_exit, :which_other_element_exit, :does_not_apply_protection_exit, :does_not_apply_because_exit, :hand_disinfection_exit, :discard_used_items_exit, :disinfection_element_exit, :employee_id, :date, :hour)
+  end
 end
