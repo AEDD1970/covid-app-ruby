@@ -25,10 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/app-cod-hr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app-cod-hr.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +74,7 @@
       <recent name="$PROJECT_DIR$/app/assets/javascripts" />
     </key>
   </component>
-  <component name="RunManager" selected="IRB console.IRB console: app-cod-hr">
+  <component name="RunManager" selected="IRB console.Rails console: app-cod-hr">
     <configuration name="IRB console: app-cod-hr" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="app-cod-hr" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="" />
@@ -215,8 +212,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="IRB console.IRB console: app-cod-hr" />
         <item itemvalue="IRB console.Rails console: app-cod-hr" />
+        <item itemvalue="IRB console.IRB console: app-cod-hr" />
         <item itemvalue="IRB console.IRB console: app-cod-hr" />
         <item itemvalue="IRB console.Rails console: app-cod-hr" />
       </list>
@@ -345,29 +342,29 @@
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588301035136" />
     <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590698817726" />
-    <state width="1874" height="416" key="GridCell.Tab.0.bottom" timestamp="1591029617282">
+    <state width="1874" height="416" key="GridCell.Tab.0.bottom" timestamp="1591032315043">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591029617282" />
+    <state width="1874" height="416" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315043" />
     <state width="1874" height="258" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
-    <state width="1874" height="416" key="GridCell.Tab.0.center" timestamp="1591029617281">
+    <state width="1874" height="416" key="GridCell.Tab.0.center" timestamp="1591032315042">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591029617281" />
+    <state width="1874" height="416" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315042" />
     <state width="1874" height="258" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
-    <state width="1874" height="416" key="GridCell.Tab.0.left" timestamp="1591029617281">
+    <state width="1874" height="416" key="GridCell.Tab.0.left" timestamp="1591032315042">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591029617281" />
+    <state width="1874" height="416" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315042" />
     <state width="1874" height="258" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
-    <state width="1874" height="416" key="GridCell.Tab.0.right" timestamp="1591029617282">
+    <state width="1874" height="416" key="GridCell.Tab.0.right" timestamp="1591032315042">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591029617282" />
+    <state width="1874" height="416" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315042" />
     <state width="1874" height="258" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
     <state width="1874" height="416" key="GridCell.Tab.1.bottom" timestamp="1590797718094">
       <screen x="1366" y="0" width="1920" height="1080" />
@@ -441,7 +438,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app_cod_hr@Development__app_cod_hr.rcov" NAME="Development: app-cod-hr Coverage Results" MODIFIED="1590797454626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
-    <SUITE FILE_PATH="coverage/app_cod_hr@Rails_console__app_cod_hr.rcov" NAME="Rails console: app-cod-hr Coverage Results" MODIFIED="1589990652104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
     <SUITE FILE_PATH="coverage/app_cod_hr@IRB_console__app_cod_hr.rcov" NAME="IRB console: app-cod-hr Coverage Results" MODIFIED="1591029573680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
+    <SUITE FILE_PATH="coverage/app_cod_hr@Rails_console__app_cod_hr.rcov" NAME="Rails console: app-cod-hr Coverage Results" MODIFIED="1591032307461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
   </component>
 </project>

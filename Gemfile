@@ -19,9 +19,8 @@ gem 'rb-readline', '~> 0.5.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-gem 'axlsx_rails', '>= 0.5.1'
-gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844' # MIT-License
-# gem 'axlsx_rails', '>= 0.5.1' # MIT-License
+gem 'caxlsx'
+gem 'caxlsx_rails'
 
 gem 'rubyzip', '>= 1.2.1' # Ruby license
 # Use SCSS for stylesheets
