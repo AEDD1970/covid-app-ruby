@@ -11,12 +11,12 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
-//= require rails-ujs
+//= require jquery.turbolinks
 //= require sweetalert2
 //= require popper
 //= require bootstrap
+//= require rails-ujs
 //= require sb-admin-2.min
 //= require activestorage
 //= require turbolinks
