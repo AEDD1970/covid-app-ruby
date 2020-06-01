@@ -25,19 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/app-cod-hr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app-cod-hr.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/employees_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/employees_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/employee.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/employee.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/employees/create.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employees/create.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/employees/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employees/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/employees/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employees/update.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20200423015742_create_employees.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200423015742_create_employees.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +270,7 @@
       <workItem from="1590794559229" duration="3158000" />
       <workItem from="1590797754035" duration="3454000" />
       <workItem from="1591028530810" duration="681000" />
-      <workItem from="1591045917541" duration="1288000" />
+      <workItem from="1591045917541" duration="3168000" />
     </task>
     <servers />
   </component>
@@ -430,11 +418,11 @@
     </state>
     <state x="1663" y="0" width="982" height="423" key="dock-window-2/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588145068326" />
     <state x="1581" y="398" width="1161" height="545" key="dock-window-2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588578235857" />
-    <state x="1828" y="161" width="914" height="761" key="find.popup" timestamp="1591046884289">
+    <state x="1828" y="161" width="914" height="761" key="find.popup" timestamp="1591047205651">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="407" y="137" width="618" height="522" key="find.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588303367748" />
-    <state x="1828" y="161" width="914" height="761" key="find.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591046884289" />
+    <state x="1828" y="161" width="914" height="761" key="find.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591047205651" />
     <state x="407" y="137" width="619" height="580" key="find.popup/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588826423653" />
     <state x="365" y="115" width="700" height="530" key="recent.locations.popup" timestamp="1588086378204">
       <screen x="67" y="27" width="1299" height="741" />
@@ -446,12 +434,12 @@
     <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588304696667" />
     <state x="1829" y="216" key="run.anything.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590786044168" />
     <state x="380" y="175" key="run.anything.popup/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588788017209" />
-    <state x="1827" y="90" width="994" height="989" key="search.everywhere.popup" timestamp="1591030108149">
+    <state x="1827" y="90" width="994" height="989" key="search.everywhere.popup" timestamp="1591048760315">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1693" y="64" width="704" height="703" key="search.everywhere.popup/67.27.1299.741/1366.0.1360.768@1366.0.1360.768" timestamp="1588001321818" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588302566000" />
-    <state x="1827" y="90" width="994" height="989" key="search.everywhere.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591030108149" />
+    <state x="1827" y="90" width="994" height="989" key="search.everywhere.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591048760315" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app_cod_hr@Development__app_cod_hr.rcov" NAME="Development: app-cod-hr Coverage Results" MODIFIED="1590797454626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
