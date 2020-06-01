@@ -25,7 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +272,7 @@
       <workItem from="1590794559229" duration="3158000" />
       <workItem from="1590797754035" duration="3454000" />
       <workItem from="1591028530810" duration="681000" />
-      <workItem from="1591045917541" duration="3168000" />
+      <workItem from="1591045917541" duration="3592000" />
     </task>
     <servers />
   </component>

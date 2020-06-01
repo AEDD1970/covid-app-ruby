@@ -14,6 +14,8 @@ gem 'will_paginate-bootstrap4'
 gem 'sweetalert2'
 gem 'sweetify'
 
+gem 'jquery-turbolinks'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 gem 'caxlsx'
