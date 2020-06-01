@@ -14,7 +14,7 @@ gem 'will_paginate-bootstrap4'
 gem 'sweetalert2'
 gem 'sweetify'
 
-gem 'rb-readline', '~> 0.5.3'
+gem 'rb-readline', '~> 0.5.1'
 
 
 # Use Puma as the app server
