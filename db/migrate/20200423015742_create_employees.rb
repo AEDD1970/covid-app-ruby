@@ -17,7 +17,7 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
       t.integer :weight
       t.float :size
       t.float :imc
-      t.string :interpretation_id
+      t.string :interpretation
       t.string :date_and_time
       t.integer :company_id
 

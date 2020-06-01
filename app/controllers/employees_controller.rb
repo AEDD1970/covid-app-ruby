@@ -31,7 +31,7 @@ class EmployeesController < ApplicationController
       @employee.responsible = "ANDRES"
       @employee.responsible_position = "Resepcion"
       @employee.imc = calculate_data
-      @employee.interpretation_id = calculate_portion
+      @employee.interpretation = calculate_portion
       @employee.date_and_time = Time.now.strftime("%d-%m-%Y %I:%M %p")
       respond_to do |format|
         if @employee.save
@@ -48,23 +48,40 @@ class EmployeesController < ApplicationController
   end
 
   def calculate_data
+    weight = @employee.weight.to_f
     height = @employee.size
-    weight = @employee.weight
-    @result = weight / height ** 2
-    @result.ceil(2)
+    @imc = weight/(height * height)
+    @imc.ceil(2)
   end
 
   def calculate_portion
-    if ((@result < 18.5) || (@result == 18.5))
-      Interpretation.find(4).id
-    elsif ((@result > 18.5) && (@result < 25))
-      Interpretation.find(3).id
-    elsif ((@result > 24.9) && (@result < 30))
-      Interpretation.find(2).id
-    elsif ((@result > 30) && (@result == 30))
-      Interpretation.find(1).id
+    if((@imc < 18.5) || (@imc == 18.5))
+      @imc_result = 'DESNUTRICION'
+    elsif((@imc > 18.5) && (@imc < 25))
+      @imc_result = 'NORMAL'
+    elsif((@imc > 24.9) && (@imc < 30))
+      @imc_result = 'SOBREPESO'
+    elsif((@imc > 30) && (@imc == 30))
+      @imc_result = 'OBESIDAD'
     end
   end
+
+  # def calculate_muscle_mass_index
+  #   #weight = peso
+  #   weight = @employee.weight.to_f
+  #   height = @employee.size
+  #   @imc = weight/(height * height)
+  #
+  #   if((@imc < 18.5) || (@imc == 18.5))
+  #     @imc_result = 'DESNUTRICION'
+  #   elsif((@imc > 18.5) && (@imc < 25))
+  #     @imc_result = 'NORMAL'
+  #   elsif((@imc > 24.9) && (@imc < 30))
+  #     @imc_result = 'SOBREPESO'
+  #   elsif((@imc > 30) && (@imc == 30))
+  #     @imc_result = 'OBESIDAD'
+  #   end
+  # end
 
   def update
     respond_to do |format|
@@ -95,6 +112,6 @@ class EmployeesController < ApplicationController
   end
 
   def employee_params
-    params.require(:employee).permit(:responsible, :responsible_position, :document_number, :name, :organizational_unit, :position, :gender_id, :eps, :age, :blood_type, :phone, :emergency_number, :weight, :size, :imc, :interpretation_id, :date_and_time)
+    params.require(:employee).permit(:responsible, :responsible_position, :document_number, :name, :organizational_unit, :position, :gender_id, :eps, :age, :blood_type, :phone, :emergency_number, :weight, :size, :imc, :interpretation, :date_and_time)
   end
 end

@@ -43,7 +43,7 @@
             <th>Teléfono de Contacto</th>
             <th>Teléfono en Caso de Emergencia</th>
             <th>Peso</th>
-            <th>Talla</th>
+            <th>Altura</th>
             <th>IMC</th>
             <th>Interpretación</th>
           </tr>
@@ -64,7 +64,7 @@
                 <td><%= emp.weight %></td>
                 <td><%= emp.size %></td>
                 <td><%= emp.imc %></td>
-                <td><%= emp.interpretation.description %></td>
+                <td><%= emp.interpretation %></td>
                   <td>
                     <%= link_to "Editar", edit_employee_path(emp), html_options = {class: "btn btn-info btn-xs", remote: true}%>
                     <%= link_to "Borrar", emp, remote: true, method: :delete, data: { confirm: "¿Está seguro que quiere borrar el empleado: #{emp.name}?"}, class: "btn btn-danger btn-xs" %>

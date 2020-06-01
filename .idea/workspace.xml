@@ -25,7 +25,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e76f72d-949d-4aa7-8d77-01a129912e0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.generators" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/app-cod-hr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/app-cod-hr.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/employees_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/employees_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/employee.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/employee.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/employees/create.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employees/create.js.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/employees/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employees/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/employees/update.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employees/update.js.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200423015742_create_employees.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20200423015742_create_employees.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,6 +282,7 @@
       <workItem from="1590794559229" duration="3158000" />
       <workItem from="1590797754035" duration="3454000" />
       <workItem from="1591028530810" duration="681000" />
+      <workItem from="1591045917541" duration="1288000" />
     </task>
     <servers />
   </component>
@@ -324,11 +337,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1823" y="249" width="598" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588717401947">
+    <state x="1823" y="249" width="598" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591034178726">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="376" y="198" width="671" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588093864386" />
-    <state x="1823" y="249" width="598" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588717401947" />
+    <state x="1823" y="249" width="598" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591034178726" />
     <state x="449" y="145" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588117622559">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
@@ -342,29 +355,29 @@
     </state>
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588301035136" />
     <state x="2005" y="185" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590698817726" />
-    <state width="1874" height="416" key="GridCell.Tab.0.bottom" timestamp="1591032315043">
+    <state width="1874" height="381" key="GridCell.Tab.0.bottom" timestamp="1591046516204">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315043" />
+    <state width="1874" height="381" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591046516204" />
     <state width="1874" height="258" key="GridCell.Tab.0.bottom/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
-    <state width="1874" height="416" key="GridCell.Tab.0.center" timestamp="1591032315042">
+    <state width="1874" height="381" key="GridCell.Tab.0.center" timestamp="1591046516204">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315042" />
+    <state width="1874" height="381" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591046516204" />
     <state width="1874" height="258" key="GridCell.Tab.0.center/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
-    <state width="1874" height="416" key="GridCell.Tab.0.left" timestamp="1591032315042">
+    <state width="1874" height="381" key="GridCell.Tab.0.left" timestamp="1591046516203">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315042" />
+    <state width="1874" height="381" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591046516203" />
     <state width="1874" height="258" key="GridCell.Tab.0.left/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
-    <state width="1874" height="416" key="GridCell.Tab.0.right" timestamp="1591032315042">
+    <state width="1874" height="381" key="GridCell.Tab.0.right" timestamp="1591046516204">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1253" height="224" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588296572188" />
-    <state width="1874" height="416" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591032315042" />
+    <state width="1874" height="381" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591046516204" />
     <state width="1874" height="258" key="GridCell.Tab.0.right/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588971970459" />
     <state width="1874" height="416" key="GridCell.Tab.1.bottom" timestamp="1590797718094">
       <screen x="1366" y="0" width="1920" height="1080" />
@@ -399,6 +412,10 @@
     </state>
     <state x="167" y="125" width="1079" height="543" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588299663765" />
     <state x="1514" y="143" width="1455" height="792" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1590799628326" />
+    <state x="1936" y="152" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591035906719">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1936" y="152" width="770" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591035906719" />
     <state x="2097" y="454" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588867277406">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -413,11 +430,11 @@
     </state>
     <state x="1663" y="0" width="982" height="423" key="dock-window-2/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588145068326" />
     <state x="1581" y="398" width="1161" height="545" key="dock-window-2/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588578235857" />
-    <state x="1828" y="161" width="914" height="761" key="find.popup" timestamp="1591030131201">
+    <state x="1828" y="161" width="914" height="761" key="find.popup" timestamp="1591046884289">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="407" y="137" width="618" height="522" key="find.popup/67.27.1299.741/1366.0.1360.768@67.27.1299.741" timestamp="1588303367748" />
-    <state x="1828" y="161" width="914" height="761" key="find.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591030131201" />
+    <state x="1828" y="161" width="914" height="761" key="find.popup/67.27.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1591046884289" />
     <state x="407" y="137" width="619" height="580" key="find.popup/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1588826423653" />
     <state x="365" y="115" width="700" height="530" key="recent.locations.popup" timestamp="1588086378204">
       <screen x="67" y="27" width="1299" height="741" />
@@ -439,6 +456,6 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/app_cod_hr@Development__app_cod_hr.rcov" NAME="Development: app-cod-hr Coverage Results" MODIFIED="1590797454626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
     <SUITE FILE_PATH="coverage/app_cod_hr@IRB_console__app_cod_hr.rcov" NAME="IRB console: app-cod-hr Coverage Results" MODIFIED="1591029573680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
-    <SUITE FILE_PATH="coverage/app_cod_hr@Rails_console__app_cod_hr.rcov" NAME="Rails console: app-cod-hr Coverage Results" MODIFIED="1591032307461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
+    <SUITE FILE_PATH="coverage/app_cod_hr@Rails_console__app_cod_hr.rcov" NAME="Rails console: app-cod-hr Coverage Results" MODIFIED="1591046439812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="app-cod-hr" />
   </component>
 </project>
