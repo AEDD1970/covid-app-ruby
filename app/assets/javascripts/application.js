@@ -22,7 +22,7 @@
 //= require sweet-alert-confirm
 //= require_tree .
 
-//Override the default confirm dialog by rails
+//Override the default confirm dialog by rails ////
 $.rails.allowAction = function(link){
     if (link.data("confirm") == undefined){
         return true;
