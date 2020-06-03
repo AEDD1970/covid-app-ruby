@@ -13,7 +13,6 @@ gem 'will_paginate-bootstrap4'
 
 gem 'sweetalert2'
 gem 'sweetify'
-gem 'sweet-alert-confirm'
 
 gem 'jquery-turbolinks'
 

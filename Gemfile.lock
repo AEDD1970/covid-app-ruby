@@ -206,7 +206,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sweet-alert-confirm (0.4.1)
     sweetalert2 (7.25.6)
       railties (>= 3.1.0)
     sweetify (2.0.0)
@@ -230,7 +229,7 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.7.2)
       websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
+    websocket-extensions (0.1.5)
     will_paginate (3.3.0)
     will_paginate-bootstrap4 (0.2.2)
       will_paginate (~> 3.0, >= 3.0.0)
@@ -266,7 +265,6 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sweet-alert-confirm
   sweetalert2
   sweetify
   turbolinks (~> 5)
