@@ -206,6 +206,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    sweet-alert-confirm (0.4.1)
     sweetalert2 (7.25.6)
       railties (>= 3.1.0)
     sweetify (2.0.0)
@@ -265,6 +266,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  sweet-alert-confirm
   sweetalert2
   sweetify
   turbolinks (~> 5)

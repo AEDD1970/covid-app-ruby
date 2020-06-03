@@ -12,14 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
-//= require sweetalert2
 //= require popper
 //= require bootstrap
 //= require rails-ujs
 //= require sb-admin-2.min
 //= require activestorage
 //= require turbolinks
+//= require sweetalert2
+//= require sweet-alert-confirm
 //= require_tree .
 
 //Override the default confirm dialog by rails
