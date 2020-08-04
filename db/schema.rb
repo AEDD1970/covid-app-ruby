@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_05_07_145212) do
     t.integer "weight"
     t.float "size"
     t.float "imc"
-    t.string "interpretation_id"
+    t.string "interpretation"
     t.string "date_and_time"
     t.integer "company_id"
     t.datetime "created_at", null: false
