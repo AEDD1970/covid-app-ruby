@@ -56,7 +56,7 @@ gem 'zip-zip'
 gem 'sass-rails', '~> 5.0'
 
 #bootstrap design
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 
 #to use jquery in rails
 gem 'jquery-rails'
